@@ -29,5 +29,5 @@ python3 load_project.py
 ### Start the Project
 
 ```sh
-python3 ./src/server.py
+python3 ./src/python/server.py
 ```
