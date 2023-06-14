@@ -1,3 +1,4 @@
+"""Core Setup Script"""
 import os
 import subprocess
 
@@ -8,14 +9,16 @@ SRC_PATH = f"{ROOT}/src/python"
 
 
 def run_command_in_directory(directory):
+    """Installs the packages"""
     setup_py_path = os.path.join(directory, 'setup.py')
     if os.path.isfile(setup_py_path):
-        print(f"Running command in {directory}")
-        subprocess.run(COMMAND_TO_RUN, cwd=directory,
+        subprocess.run(COMMAND_TO_RUN,   # pylint: disable=subprocess-run-check
+                       cwd=directory,
                        env={"REQ_PATH": REQ_PATH})
 
 
 def install_packages():
+    """Scans for packages to install"""
     for folder_name in os.listdir(SRC_PATH):
         folder_path = os.path.join(SRC_PATH, folder_name)
         if os.path.isdir(folder_path):
