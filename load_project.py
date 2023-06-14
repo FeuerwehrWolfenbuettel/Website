@@ -1,25 +1,26 @@
 import os
 import subprocess
 
-def run_command_in_directory(directory, command):
+COMMAND_TO_RUN = ["pip", "install", "-e", "."]
+ROOT = os.path.dirname(os.path.realpath(__file__))
+REQ_PATH = f"{ROOT}/requirements.txt"
+SRC_PATH = f"{ROOT}/src/python"
+
+
+def run_command_in_directory(directory):
     setup_py_path = os.path.join(directory, 'setup.py')
     if os.path.isfile(setup_py_path):
         print(f"Running command in {directory}")
-        subprocess.run(command, cwd=directory, shell=True, env={"REQ_PATH":requirements_path})
+        subprocess.run(COMMAND_TO_RUN, cwd=directory,
+                       env={"REQ_PATH": REQ_PATH})
 
-def iterate_folders(root_directory, command):
-    for folder_name in os.listdir(root_directory):
-        folder_path = os.path.join(root_directory, folder_name)
+
+def install_packages():
+    for folder_name in os.listdir(SRC_PATH):
+        folder_path = os.path.join(SRC_PATH, folder_name)
         if os.path.isdir(folder_path):
-            run_command_in_directory(folder_path, command)
+            run_command_in_directory(folder_path)
 
-# Set the root directory and command to run
-requirements_path = f"{os.path.dirname(os.path.realpath(__file__))}/requirements.txt"
 
-root_directory = f"{os.path.dirname(os.path.realpath(__file__))}/src/python"
-command_to_run = 'pip install -e .'
-
-# Call the function to iterate over folders and run the command
-iterate_folders(root_directory, command_to_run)
-
-# print(root_directory)
+if __name__ == "__main__":
+    install_packages()
