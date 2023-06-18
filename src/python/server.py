@@ -5,8 +5,9 @@ from flask import Flask
 
 
 def get_parser() -> argparse.ArgumentParser:
+    """Creates parser"""
     new_parser = argparse.ArgumentParser(
-        prog=" "
+        prog="FF Website"
         )
 
     new_parser.add_argument("-v", "--verbosity",
@@ -18,11 +19,18 @@ def get_parser() -> argparse.ArgumentParser:
 
 
 def create_app() -> Flask:
+    """
+    Creates Flask app and adds the routes to it
+
+    Returns:
+        Flask: Flask app
+    """
     app = Flask(__name__)
     return app
 
 
 def main(args=None):
+    """Main Function"""
     app = create_app()
     app.run(host="0.0.0.0")
 
