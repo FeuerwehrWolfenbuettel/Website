@@ -1,0 +1,36 @@
+import argparse
+import logging
+
+from flask import Flask
+
+
+def get_parser() -> argparse.ArgumentParser:
+    new_parser = argparse.ArgumentParser(
+        prog=" "
+        )
+
+    new_parser.add_argument("-v", "--verbosity",
+                            required=False,
+                            action='count', default=0,
+                            help="increase output verbosity (e.g.: --vv is more than -v)")
+
+    return new_parser
+
+
+def create_app() -> Flask:
+    app = Flask(__name__)
+    return app
+
+
+def main(args=None):
+    app = create_app()
+    app.run(host="0.0.0.0")
+
+
+if __name__ == '__main__':
+    args = get_parser().parse_args()
+    LOG_FORMAT = '[%(asctime)s.%(msecs)03d|%(levelname)s|%(name)s] %(message)s'
+    level = logging.DEBUG - args.verbosity + 1 if args.verbosity > 0 else logging.INFO
+    logging.basicConfig(format=LOG_FORMAT, datefmt="%H:%M:%S",
+                        level=level)
+    main(args)

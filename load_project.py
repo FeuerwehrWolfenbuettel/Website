@@ -6,6 +6,7 @@ COMMAND_TO_RUN = ["pip", "install", "-e", "."]
 ROOT = os.path.dirname(os.path.realpath(__file__))
 REQ_PATH = f"{ROOT}/requirements.txt"
 SRC_PATH = f"{ROOT}/src/python"
+INSTALL_REQS = ["pip", "install", "-r", REQ_PATH]
 
 
 def run_command_in_directory(directory):
@@ -19,6 +20,7 @@ def run_command_in_directory(directory):
 
 def install_packages():
     """Scans for packages to install"""
+    subprocess.run(INSTALL_REQS)   # pylint: disable=subprocess-run-check
     for folder_name in os.listdir(SRC_PATH):
         folder_path = os.path.join(SRC_PATH, folder_name)
         if os.path.isdir(folder_path):
