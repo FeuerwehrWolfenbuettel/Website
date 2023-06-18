@@ -2,6 +2,26 @@
 
 ## Setting things up
 
+## Vscode Settings
+
+Put this inside the *.code-workspace
+
+```json
+
+"settings": {
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "flake8.args": [
+        "--max-line-length=120"
+    ]
+}
+
+```
+
 ### Python code base
 
 #### Setup virtual environment
