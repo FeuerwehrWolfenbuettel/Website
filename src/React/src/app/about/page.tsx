@@ -2,10 +2,10 @@
 import Head from 'next/head'
 import styles from '../app/page.module.css'
 
-export default function Home() {
+export default function About() {
   return (
     <main>
-      <h1>Hello World</h1>
+      <h1>Über uns</h1>
     </main>
   )
 }
