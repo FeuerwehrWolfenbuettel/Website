@@ -18,7 +18,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <div className="shape">
                 <div className="logo_nav">
                     <Image
-                      src="/logo.png"
+                      id="logo"
+                      src="/images/logo.png"
                       width={75}
                       height={72}
                       alt='Logo'
@@ -51,14 +52,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <span className="sub-text-footer">Wolfenbüttel</span>
           </div>
           <div className="social-media-icon">
-            <img className="not-last-image" src="" alt="instagram" />
-            <img className="not-last-image" src="" alt="youtube" />
-            <img src="" alt="facebook" />
+            <img className="not-last-image" src="/icons/icons8-instagram.svg" alt="instagram" />
+            <img className="not-last-image" src="/icons/icons8-youtube-play.svg" alt="youtube" />
+            <img src="/icons/icons8-facebook.svg" alt="facebook" />
           </div>
         </div>
         <div className="email-and-policy">
           <div className="email">
-            <img src="" alt="email" />
+            <img src="/icons/icons8-email.svg" alt="email" />
             <span>info@Schwerpunktfeuerwehrwf.de</span>
           </div>
           <div className="privacy-policy">
