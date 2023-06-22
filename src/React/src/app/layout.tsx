@@ -27,11 +27,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     />
                     <nav className="menu">
                         <ul>
-                          <li><a href="#">Home</a></li>
-                          <li><a href="#">Über uns</a></li>
-                          <li><a href="#">Feuerwache</a></li>
-                          <li><a href="#">Fahrzeuge</a></li>
-                          <li><a href="#">Kontakt</a></li>
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/about">Über uns</a></li>
+                          <li><a href="/firestation">Feuerwache</a></li>
+                          <li><a href="/vehicles">Fahrzeuge</a></li>
+                          <li><a href="/contact">Kontakt</a></li>
                         </ul>
                         <button className="join-button">Mitglied werden</button>
                     </nav>
@@ -52,9 +52,32 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <span className="sub-text-footer">Wolfenbüttel</span>
           </div>
           <div className="social-media-icon">
-            <img className="not-last-image" src="/icons/icons8-instagram.svg" alt="instagram" />
-            <img className="not-last-image" src="/icons/icons8-youtube-play.svg" alt="youtube" />
-            <img src="/icons/icons8-facebook.svg" alt="facebook" />
+            <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/" target="_blank" rel="noopener noreferrer">
+              <Image
+                className="not-last-image"
+                src="/icons/icons8-instagram.svg"
+                height={40}
+                width={40}
+                alt='instagram'
+              />
+            </a>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              <Image
+                className="not-last-image"
+                src="/icons/icons8-youtube-play.svg"
+                height={40}
+                width={40}
+                alt='youtube'
+              />
+            </a>
+            <a href="https://www.facebook.com/ortsfeuerwehrwolfenbuettel/" target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/icons/icons8-facebook.svg"
+                width={40}
+                height={40}
+                alt="facebook"
+              />
+            </a>
           </div>
         </div>
         <div className="email-and-policy">
