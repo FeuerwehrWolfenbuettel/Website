@@ -17,14 +17,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="shape-container">
             <div className="shape">
                 <div className="logo_nav">
-                    <Image
-                      id="logo"
-                      src="/images/logo.png"
-                      width={75}
-                      height={72}
-                      alt='Logo'
-                      priority={true}
-                    />
+                    <a href="/">
+                      <Image
+                        id="logo"
+                        src="/images/logo.png"
+                        width={75}
+                        height={72}
+                        alt='Logo'
+                        priority={true}
+                      />
+                    </a>
                     <nav className="menu">
                         <ul>
                           <li><a href="/">Home</a></li>
