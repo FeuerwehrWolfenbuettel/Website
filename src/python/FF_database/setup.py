@@ -21,5 +21,5 @@ setup(
     description='',
     author='Felix Schmidt',
     author_email='Felix-Schmidt2@outlook.de',
-    install_requires=requirements()
+    # install_requires=requirements()
 )
