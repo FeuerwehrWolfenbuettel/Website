@@ -13,18 +13,54 @@
       "type": "http",
       "documentation": "",
       "method": "get",
-      "endpoint": "localhost:8080/article/1",
+      "endpoint": "article/1",
       "responses": [
         {
           "uuid": "598632c6-baf1-425d-b1b2-65a65b0ab6c2",
-          "body": "{\n  \n}",
+          "body": "{\n  'id': '1',\n  'title':'Bitte helfen Sie mir ich bin in Gefahr',\n  'pictures':[],\n  'titlepicture':{},\n  'summary':'Hilf mal der ist in Gefahr',\n  'text':'In einer Welt voller Herausforderungen und Gefahren gibt es immer wieder Situationen, in denen Menschen in Gefahr geraten. Ob es sich um Naturkatastrophen, Unfälle, medizinische Notfälle oder andere bedrohliche Situationen handelt, die Menschheit ist mit zahlreichen Risiken konfrontiert.\n\nWenn Menschen in Gefahr geraten, kann dies sowohl physische als auch emotionale Auswirkungen haben. Physische Gefahren können sich in verschiedenen Formen manifestieren, wie beispielsweise in einem Gebäudeeinsturz, einem Flugzeugabsturz oder einer Schiffsbruch. In solchen Momenten stehen die Menschen oft vor lebensbedrohlichen Situationen, in denen ihr Überlebensinstinkt und ihre Fähigkeit, schnell zu handeln, auf die Probe gestellt werden. Sie müssen möglicherweise um ihr Leben kämpfen, ihre Stärke und Ausdauer nutzen, um sich aus einer gefährlichen Situation zu befreien.\n\nNeben den physischen Risiken können Menschen auch emotionalen Belastungen ausgesetzt sein, wenn sie sich in Gefahr befinden. Die Angst vor dem Unbekannten, die Sorge um ihre Lieben und die Unsicherheit über das, was kommen mag, können überwältigend sein. In solchen Momenten ist es wichtig, dass Menschen Unterstützung und Ermutigung von anderen erhalten, sei es von Rettungskräften, Familienmitgliedern oder Freunden. Emotionale Unterstützung kann dazu beitragen, den Mut und die Hoffnung aufrechtzuerhalten und den Glauben an eine positive Wendung inmitten der Gefahr aufrechtzuerhalten.\n\nEs ist jedoch ermutigend zu sehen, wie Menschen in Gefahr oft über sich hinauswachsen. In solchen Momenten zeigen sie erstaunliche Tapferkeit, Mitgefühl und Entschlossenheit. Rettungskräfte und Helfer setzen oft ihr eigenes Leben aufs Spiel, um anderen zu helfen und Menschen aus gefährlichen Situationen zu retten. Freiwillige engagieren sich, um Hilfsmaßnahmen zu organisieren und Unterstützung für diejenigen bereitzustellen, die es am dringendsten benötigen. Inmitten der Dunkelheit der Gefahr erstrahlt oft das Licht des menschlichen Mutes und der Solidarität.\n\nEs ist wichtig, dass wir als Gesellschaft daran arbeiten, Menschen vor Gefahren zu schützen und sie in Momenten der Not zu unterstützen. Durch eine angemessene Infrastruktur, Notfallpläne, Schulungen und die Förderung von Sicherheitsbewusstsein können wir dazu beitragen, das Risiko von Gefahren zu verringern und Menschenleben zu retten.\n\nIn Zeiten von Gefahr ist es auch von großer Bedeutung, den Menschen beizustehen, die bereits Opfer von Katastrophen oder Unfällen geworden sind. Wir können ihnen helfen, ihre Traumata zu überwinden, ihr Leben wieder aufzubauen und Unterstützung anzubieten, damit sie sich nicht allein gelassen fühlen.\n\nLetztendlich sollten wir uns immer daran erinnern, dass jeder von uns in eine gefährliche Situation geraten kann. Es liegt in unserer Verantwortung, uns gegenseitig zu schützen, zu unterstützen und das Bewusstsein für Gefahren zu schärfen. Indem wir zusammenarbeiten und uns für die Sicherheit und das Wohlergehen aller einsetzen, können wir eine sicherere und resilientere Gesellschaft schaffen.',\n  'tags':['gefahr','gefährlich'],\n  'date':'1689184314707',\n  'author':'Vincent Kurby'\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
           "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
-          "databucketID": "",
+          "databucketID": "9xwh",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "f8f3f59f-917b-4051-9638-f4a6efdf7da6",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "article",
+      "responses": [
+        {
+          "uuid": "5971ffc9-9b97-473f-aff0-830f26553b6b",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "DATABUCKET",
+          "filePath": "",
+          "databucketID": "9xwh",
           "sendFileAsBody": false,
           "rules": [],
           "rulesOperator": "OR",
@@ -41,6 +77,10 @@
     {
       "type": "route",
       "uuid": "972f3b6c-8b61-49f9-909a-125a0385bb07"
+    },
+    {
+      "type": "route",
+      "uuid": "f8f3f59f-917b-4051-9638-f4a6efdf7da6"
     }
   ],
   "proxyMode": false,
@@ -74,5 +114,13 @@
       "value": ""
     }
   ],
-  "data": []
+  "data": [
+    {
+      "uuid": "cbd3adfb-47ff-4002-be66-2016c89e9231",
+      "id": "9xwh",
+      "name": "Articles",
+      "documentation": "",
+      "value": "{articles: [{\n  'id': '1',\n  'title':'Bitte helfen Sie mir ich bin in Gefahr',\n  'pictures':[],\n  'titlepicture':{},\n  'summary':'Hilf mal der ist in Gefahr',\n  'text':'In einer Welt voller Herausforderungen und Gefahren gibt es immer wieder Situationen, in denen Menschen in Gefahr geraten. Ob es sich um Naturkatastrophen, Unfälle, medizinische Notfälle oder andere bedrohliche Situationen handelt, die Menschheit ist mit zahlreichen Risiken konfrontiert.\n\nWenn Menschen in Gefahr geraten, kann dies sowohl physische als auch emotionale Auswirkungen haben. Physische Gefahren können sich in verschiedenen Formen manifestieren, wie beispielsweise in einem Gebäudeeinsturz, einem Flugzeugabsturz oder einer Schiffsbruch. In solchen Momenten stehen die Menschen oft vor lebensbedrohlichen Situationen, in denen ihr Überlebensinstinkt und ihre Fähigkeit, schnell zu handeln, auf die Probe gestellt werden. Sie müssen möglicherweise um ihr Leben kämpfen, ihre Stärke und Ausdauer nutzen, um sich aus einer gefährlichen Situation zu befreien.\n\nNeben den physischen Risiken können Menschen auch emotionalen Belastungen ausgesetzt sein, wenn sie sich in Gefahr befinden. Die Angst vor dem Unbekannten, die Sorge um ihre Lieben und die Unsicherheit über das, was kommen mag, können überwältigend sein. In solchen Momenten ist es wichtig, dass Menschen Unterstützung und Ermutigung von anderen erhalten, sei es von Rettungskräften, Familienmitgliedern oder Freunden. Emotionale Unterstützung kann dazu beitragen, den Mut und die Hoffnung aufrechtzuerhalten und den Glauben an eine positive Wendung inmitten der Gefahr aufrechtzuerhalten.\n\nEs ist jedoch ermutigend zu sehen, wie Menschen in Gefahr oft über sich hinauswachsen. In solchen Momenten zeigen sie erstaunliche Tapferkeit, Mitgefühl und Entschlossenheit. Rettungskräfte und Helfer setzen oft ihr eigenes Leben aufs Spiel, um anderen zu helfen und Menschen aus gefährlichen Situationen zu retten. Freiwillige engagieren sich, um Hilfsmaßnahmen zu organisieren und Unterstützung für diejenigen bereitzustellen, die es am dringendsten benötigen. Inmitten der Dunkelheit der Gefahr erstrahlt oft das Licht des menschlichen Mutes und der Solidarität.\n\nEs ist wichtig, dass wir als Gesellschaft daran arbeiten, Menschen vor Gefahren zu schützen und sie in Momenten der Not zu unterstützen. Durch eine angemessene Infrastruktur, Notfallpläne, Schulungen und die Förderung von Sicherheitsbewusstsein können wir dazu beitragen, das Risiko von Gefahren zu verringern und Menschenleben zu retten.\n\nIn Zeiten von Gefahr ist es auch von großer Bedeutung, den Menschen beizustehen, die bereits Opfer von Katastrophen oder Unfällen geworden sind. Wir können ihnen helfen, ihre Traumata zu überwinden, ihr Leben wieder aufzubauen und Unterstützung anzubieten, damit sie sich nicht allein gelassen fühlen.\n\nLetztendlich sollten wir uns immer daran erinnern, dass jeder von uns in eine gefährliche Situation geraten kann. Es liegt in unserer Verantwortung, uns gegenseitig zu schützen, zu unterstützen und das Bewusstsein für Gefahren zu schärfen. Indem wir zusammenarbeiten und uns für die Sicherheit und das Wohlergehen aller einsetzen, können wir eine sicherere und resilientere Gesellschaft schaffen.',\n  'tags':['gefahr','gefährlich'],\n  'date':'1689184314707',\n  'author':'Vincent Kurby'\n},\n\n{\n  'id':'2',\n  'title':'Lorem Ipsum',\n  'pictures':[],\n  'titlepicture':{},\n  'summary':'Hilf mal der ist in Gefahr',\n  'text':'Lorem ipsum is a placeholder text commonly used in the design and typesetting industry. It consists of Latin words that do not form coherent sentences, and its purpose is to fill in space in a visual representation of text without distracting the viewer. The text is typically derived from a passage by Cicero, a Roman philosopher, but has been altered and randomized to make it nonsensical.\n\nThe use of Lorem ipsum allows designers and developers to focus on the visual aspects of a layout or design without getting distracted by the actual content. By using this placeholder text, they can evaluate the aesthetics, spacing, and overall design of a project before incorporating real content.\n\nIn summary, Lorem ipsum is a standardized placeholder text that serves as a temporary filler in design and typesetting projects, helping professionals focus on the visual aspects of their work without being distracted by the content itself.',\n  'tags':['gefahr','gefährlich'],\n  'date':'1689184314707',\n  'author':'Vincent Kurby'\n},\n}\n],\n\n}\n\n"
+    }
+  ]
 }
