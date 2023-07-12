@@ -1,15 +1,22 @@
+// Page.tsx
+import React from 'react';
+import TextWithPictureComponent from '../../public/components/TextWithPictureComponent';
 
-import Head from 'next/head'
-import styles from '../app/page.module.css'
-import TextWithPicture from '../../public/components/TextWithPicture'
+const Page = () => {
+    // Component logic here
 
-export default function Home() {
-  return (
-    <main>
-      {/*<AlarmTicker />*/}
-      <TextWithPicture />
-      <TextWithPicture />
-      
-    </main>
-  )
-}
+    return (
+        <div>
+            <h1>Your Page Title</h1>
+            {/* Other page content */}
+            <TextWithPictureComponent />
+        </div>
+    );
+};
+
+export default Page;
+
+
+
+
+

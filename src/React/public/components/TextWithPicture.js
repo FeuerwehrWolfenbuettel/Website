@@ -1,4 +1,3 @@
-import styles from '../css_for_components/TextWithPicture.css'
 import React, { useEffect, useState } from 'react';
 import styles from '../css_for_components/TextWithPicture.css';
 import Image from 'next/image';
@@ -12,7 +11,7 @@ const TextWithPicture = () => {
 
     const fetchData = async () => {
         try {
-            const response = await fetch('https://api.example.com/data'); // Replace with your API endpoint
+            const response = await fetch('https://localhost:3002/article/1'); // Replace with your API endpoint
             const jsonData = await response.json();
             setData(jsonData);
         } catch (error) {
