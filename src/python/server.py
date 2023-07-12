@@ -3,7 +3,7 @@ import logging
 
 from flask import Flask
 
-# import FF_database
+import FF_database
 
 def get_parser() -> argparse.ArgumentParser:
     """Creates parser"""
