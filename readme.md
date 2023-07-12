@@ -4,7 +4,7 @@
 
 ## Vscode Settings
 
-Put this inside the *.code-workspace
+Put this inside the \*.code-workspace
 
 ```json
 
@@ -51,3 +51,5 @@ python3 load_project.py
 ```sh
 python3 ./src/python/server.py
 ```
+
+##

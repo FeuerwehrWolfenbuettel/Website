@@ -6,7 +6,10 @@ import TextWithPicture from '../../public/components/TextWithPicture'
 export default function Home() {
   return (
     <main>
+      {/*<AlarmTicker />*/}
       <TextWithPicture />
+      <TextWithPicture />
+      
     </main>
   )
 }
