@@ -1,15 +1,27 @@
 import argparse
 import logging
+from dataclasses import dataclass
 
 from flask import Flask
+from flask_restful import Api
 
-# import FF_database
+import routes.routes as routes
+
+
+@dataclass
+class Config:
+    """
+    Configuration
+    """
+    PORT = 9001
+    REST_PATH = "/rest/v1"
+
 
 def get_parser() -> argparse.ArgumentParser:
     """Creates parser"""
     new_parser = argparse.ArgumentParser(
         prog="FF Website"
-        )
+    )
 
     new_parser.add_argument("-v", "--verbosity",
                             required=False,
@@ -17,6 +29,21 @@ def get_parser() -> argparse.ArgumentParser:
                             help="increase output verbosity (e.g.: --vv is more than -v)")
 
     return new_parser
+
+
+def add_article_endpoints(api: Api):
+    """
+    Adds all article related endpoints
+
+    Args:
+        api (Api): rest api
+    """
+    api.add_resource(routes.AllArticles,
+                     f"{Config.REST_PATH}{routes.AllArticles.PATH}")
+    api.add_resource(routes.SingleArticle,
+                     f"{Config.REST_PATH}{routes.SingleArticle.PATH}")
+    api.add_resource(routes.ArticleByTopics,
+                     f"{Config.REST_PATH}{routes.ArticleByTopics.PATH}")
 
 
 def create_app() -> Flask:
@@ -27,19 +54,23 @@ def create_app() -> Flask:
         Flask: Flask app
     """
     app = Flask(__name__)
+    api = Api(app)
+    add_article_endpoints(api)
+
     return app
 
 
 def main(args=None):
     """Main Function"""
     app = create_app()
-    app.run(host="0.0.0.0")
+    app.run(debug=True, port=Config.PORT)
 
 
 if __name__ == '__main__':
     args = get_parser().parse_args()
     LOG_FORMAT = '[%(asctime)s.%(msecs)03d|%(levelname)s|%(name)s] %(message)s'
-    level = logging.DEBUG - args.verbosity + 1 if args.verbosity > 0 else logging.INFO
+    level = logging.DEBUG - args.verbosity + \
+        1 if args.verbosity > 0 else logging.INFO
     logging.basicConfig(format=LOG_FORMAT, datefmt="%H:%M:%S",
                         level=level)
     main(args)
