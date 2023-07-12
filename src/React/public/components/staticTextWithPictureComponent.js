@@ -1,15 +1,15 @@
-import styles from '../css_for_components/staticTextWithPicture.css'
+import styles from '../css_for_components/staticTextWithPictureComponent.css'
 import Image from 'next/image';
 
-const StaticTextWithPicture = () => {
+const StaticTextWithPictureComponent = () => {
     return (
         <div className='content'>
             <div className='spacer-before'></div>
             <div className='content-with-picture'>
                 <Image
                     src="/images/Gesamtbild-Feuerwehr-Wolfenbüttel.jpg"
-                    width={500}
-                    height={300}
+                    width={600}
+                    height={450}
                     alt='Logo'
                     priority={true}
                 />
@@ -19,8 +19,8 @@ const StaticTextWithPicture = () => {
                             <div className='header-stripe'></div>
                         </div>
                         <div className='header'>
-                            <span>150 jähriges</span>
-                            <span>Jubiläum</span>
+                            <span style={{ display: 'block' }}>150 jähriges</span>
+                            <span style={{ display: 'block' }}>Jubiläum</span>
                         </div>
                     </div>
                     <div className='flowing-text'>
@@ -35,7 +35,7 @@ const StaticTextWithPicture = () => {
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                             diam nonumy eirmod tempor invidunt ut labore et </p>
                     </div>
-                    <button className='continue-button'>Weiter lesen</button>
+                    <button className='continue-button'><a href="/pageWithFullArticle">Weiter lesen</a></button>
                 </div>
             </div>
             <div className='spacer-after'></div>
@@ -43,4 +43,4 @@ const StaticTextWithPicture = () => {
     );
 };
 
-export default StaticTextWithPicture;
+export default StaticTextWithPictureComponent;

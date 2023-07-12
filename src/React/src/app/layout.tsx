@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     <nav className="menu">
                         <ul>
                           <li><a href="/">Home</a></li>
-                          <li><a href="/about">Über uns</a></li>
+                          <li><a href="/pageWithFullArticle">PageWithFullArticle</a></li>
                           <li><a href="/firestation">Feuerwache</a></li>
                           <li><a href="/vehicles">Fahrzeuge</a></li>
                           <li><a href="/contact">Kontakt</a></li>
