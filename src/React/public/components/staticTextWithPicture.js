@@ -1,4 +1,4 @@
-import styles from '../css_for_components/TextWithPicture.css'
+import styles from '../css_for_components/staticTextWithPicture.css'
 import Image from 'next/image';
 
 const StaticTextWithPicture = () => {
