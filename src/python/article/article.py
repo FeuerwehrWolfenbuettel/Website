@@ -38,7 +38,7 @@ def serialize(articles):
 
 def get_test_article() -> Article:
     if not Config.DEBUG:
-        raise NoDebugEnvException()
+        raise NoDebugEnvException(get_test_article.__name__)
     return Article(
         random.randint(0, 9999),
         "Test",
@@ -52,9 +52,9 @@ def get_test_article() -> Article:
     )
 
 
-def get_list_of_test_articles() -> list[Article]:
+def get_list_of_test_articles(number=5) -> list[Article]:
     if not Config.DEBUG:
-        raise NoDebugEnvException()
+        raise NoDebugEnvException(get_list_of_test_articles.__name__)
     return [
-        get_test_article() for x in range(5)
+        get_test_article() for x in range(number)
     ]
