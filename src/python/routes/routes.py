@@ -1,5 +1,5 @@
 from flask_restful import Resource, request
-
+import routes.return_object as r
 
 class AllArticles(Resource):
     PATH = "/article"
@@ -27,4 +27,5 @@ class ArticleByTopics(Resource):
     PATH = f"{AllArticles.PATH}/topic/<string:topic>"
 
     def get(self, topic: int):
+        return f"{r.ReturnObject()}"
         return f"Article topic: {topic}"
