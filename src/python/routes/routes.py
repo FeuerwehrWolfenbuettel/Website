@@ -1,5 +1,8 @@
 from flask_restful import Resource, request
 
+from article import article
+
+
 class AllArticles(Resource):
     PATH = "/article"
 
@@ -25,6 +28,5 @@ class SingleArticle(Resource):
 class ArticleByTopics(Resource):
     PATH = f"{AllArticles.PATH}/topic/<string:topic>"
 
-    def get(self, topic: int):
-        return f"{r.ReturnObject()}"
-        return f"Article topic: {topic}"
+    def get(self, topic: str):
+        return article.serialize(article.get_list_of_test_articles())
