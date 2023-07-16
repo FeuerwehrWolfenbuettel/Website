@@ -1,7 +1,7 @@
 """Setup Script for this module"""
 
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def requirements() -> list[str]:
@@ -16,10 +16,11 @@ def requirements() -> list[str]:
 
 
 setup(
-    name='FF Wolfenbuettel Database manager',
+    name='FF Wolfenbuettel',
     version='0.1.0',
     description='',
     author='Felix Schmidt',
     author_email='Felix-Schmidt2@outlook.de',
-    # install_requires=requirements()
+    # install_requires=requirements(),
+    py_modules=find_packages()
 )
