@@ -1,5 +1,4 @@
 from flask_restful import Resource, request
-import routes.return_object as r
 
 class AllArticles(Resource):
     PATH = "/article"
