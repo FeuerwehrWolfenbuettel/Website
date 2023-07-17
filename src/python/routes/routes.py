@@ -10,7 +10,7 @@ ARTICLE_BASE_PATH = "/article"
 
 
 class AllArticles(Resource):
-    PATH = ARTICLE_BASE_PATH
+    PATH = f"{ARTICLE_BASE_PATH}/all"
 
     def get(self):
         if request.is_json:

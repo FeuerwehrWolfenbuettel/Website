@@ -4,7 +4,7 @@
 
 ```sh
 
-GET http://127.0.0.1:9001/rest/v1/article
+GET http://127.0.0.1:9001/rest/v1/article/all
 
 ```
 
