@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from flask import Flask
 from flask_restful import Api
 
-import routes.routes as routes
+from routes import article_routes
 
 
 @dataclass
@@ -39,12 +39,12 @@ def add_article_endpoints(api: Api):
     Args:
         api (Api): rest api
     """
-    api.add_resource(routes.AllArticles,
-                     f"{Config.REST_PATH}{routes.AllArticles.PATH}")
-    api.add_resource(routes.SingleArticle,
-                     f"{Config.REST_PATH}{routes.SingleArticle.PATH}")
-    api.add_resource(routes.ArticleByTopics,
-                     f"{Config.REST_PATH}{routes.ArticleByTopics.PATH}")
+    api.add_resource(article_routes.AllArticles,
+                     f"{Config.REST_PATH}{article_routes.AllArticles.PATH}")
+    api.add_resource(article_routes.SingleArticle,
+                     f"{Config.REST_PATH}{article_routes.SingleArticle.PATH}")
+    api.add_resource(article_routes.ArticleByTopics,
+                     f"{Config.REST_PATH}{article_routes.ArticleByTopics.PATH}")
 
 
 def create_app() -> Flask:
