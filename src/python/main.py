@@ -47,24 +47,36 @@ def add_article_endpoints(api: Api):
                      f"{Config.REST_PATH}{article_routes.ArticleByTopics.PATH}")
 
 
-def create_app() -> Flask:
-    """
-    Creates Flask app and adds the routes to it
+class Server:
+    def __init__(self) -> None:
+        self.app = Flask(__name__)
+        self.api = Api(self.app)
+        self.config = Config()
+        self.endpoints_loaded = False
+        self.config_loaded = False
 
-    Returns:
-        Flask: Flask app
-    """
-    app = Flask(__name__)
-    api = Api(app)
-    add_article_endpoints(api)
+    def add_endpoints(self):
+        add_article_endpoints(self.api)
 
-    return app
+        self.endpoints_loaded = True
+
+    def load_config(self):
+        self.config_loaded = True
+
+    def start(self):
+        if not self.endpoints_loaded:
+            return
+        if not self.config_loaded:
+            return
+
+        self.app.run(debug=Config.DEBUG, port=Config.PORT)
 
 
 def main(args=None):
-    """Main Function"""
-    app = create_app()
-    app.run(debug=Config.DEBUG, port=Config.PORT)
+    server = Server()
+    server.add_endpoints()
+    server.load_config()
+    server.start()
 
 
 if __name__ == '__main__':
