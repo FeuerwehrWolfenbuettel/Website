@@ -72,7 +72,7 @@ class Server:
         self.app.run(debug=Config.DEBUG, port=Config.PORT)
 
 
-def main(ar^gs=None):
+def main(args=None):
     server = Server()
     server.add_endpoints()
     server.load_config()
