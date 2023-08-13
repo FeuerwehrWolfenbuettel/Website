@@ -6,4 +6,5 @@ class Role:
         self.name = name
         self.permissions = permissions
 
-def load_roles()
+def load_roles():
+    pass
