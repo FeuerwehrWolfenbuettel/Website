@@ -1,9 +1,4 @@
-body {
-    background-color: #111111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   
   .card {
     display: flex;
@@ -11,9 +6,9 @@ body {
     align-items: center;
     position: relative;
     margin-right: 20px;
-    width: 500px;
+    width: 33%;
     height: 300px;
-    background-color: #212121;
+    
     position: relative;
     /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
