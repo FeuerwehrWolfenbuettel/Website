@@ -11,18 +11,28 @@ config.autoAddCss = false
 export default async function Home() {
     const instaFeed = await getInstagramFeed();
     return (
-        <main>
-            <h2>News</h2>
+        <main className="home-page">
+            <NewsFeed />
 
-            
             <InstagramFeed feed={instaFeed}/>
             
-            
-            <h3>Folge uns auf <span className='facebook'><a href="https://www.facebook.com/ortsfeuerwehrwolfenbuettel"> <FontAwesomeIcon icon={faFacebook}/> Facebook</a></span></h3>
             <FacebookFeed />
         </main>
     )
 }
+
+
+export function NewsFeed() {
+    return (
+        <div>
+            <h2> News </h2>
+
+            Hier kommen News hin
+
+        </div>
+    )
+}
+
 
 export function InstagramFeed({feed}:any) {
     
@@ -32,26 +42,32 @@ export function InstagramFeed({feed}:any) {
     return (
         <div>
         <h2>
-                Folge uns auf <span className='instagram'><a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/"> <FontAwesomeIcon icon={faInstagram}/> Instagram</a></span>
-            </h2>
-    <div className='insta-posts'>
-        {images && images.map((image: any) => (
-            <div key={image.id} className='post'>
-                <a href={image.permalink}>
-                <img src={image.media_url} alt={image.caption}  />
-                </a>
-            </div> 
-        ))
+            Folge uns auf <span className='instagram'><a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/"> <FontAwesomeIcon icon={faInstagram}/> Instagram</a></span>
+        </h2>
+            <div className='insta-posts'>
+                {images && images.slice(0, 5).map((image: any) => (
+                    <div key={image.id} className='post'>
+                        <a href={image.permalink}>
+                        <img src={image.media_url} alt={image.caption}  />
+                        <span>
+                        {image.caption}
+                        </span>
+                        </a>
 
-        }
-    </div>
-    </div>
+                    </div> 
+                    ))
+
+                }
+            </div>
+        </div>
     )}
     else {
         return (
-            <div>
-                Hier sollte Ihr Feed sein
-            </div>
+            
+                <div>
+                    Hier soll ein Feed hin
+                </div>
+            
         )
     }
 }
@@ -69,8 +85,17 @@ export function InstagramFeed({feed}:any) {
 function FacebookFeed() {
 
     return (
-    <div>
-        Hier ist ein Facebook Feed
+        <div>
+        <h2>Folge uns auf 
+            <span className='facebook'>
+                <a href="https://www.facebook.com/ortsfeuerwehrwolfenbuettel"> 
+                <FontAwesomeIcon icon={faFacebook}/> Facebook
+                </a>
+            </span>
+        </h2>
+        <div>
+            Hier ist ein Facebook Feed
+        </div>
     </div>
     )
 }

@@ -1,30 +1,40 @@
+import abteilungen from "./../../../assets/Abteilungen/abteilungen.json"
 import './card.css'
 
 
 export default function About() {
-  //const res = await fetch("localhost:3002/aboutUs")
+  const abteilungen = getAboutUs().abteilungen;
   return (
     <main>
       <h1>Über unsere Abteilungen</h1>
-      
+        {abteilungen && abteilungen.map((abteilung:any) => (
+            <Card aboutUs={abteilung} />
+        ))
+  }
     </main>
   )
 }
 
-function Card() {
+function Card({aboutUs}: any) {
 
   return (
 
     <div className="card">
       <div className="info">
         <div className="headline">
-          <h1></h1>
+          <h1> {aboutUs.title}</h1>
         </div>
       </div>
       <div className="picture">
-        <img src="https://i.ibb.co/yXcM07d/garreth-paul-3-Qo-ABp-ZPGqs-unsplash.jpg" alt="Beschreibung des Bildes"/>
+        <img src={aboutUs.titlePicture} alt="Beschreibung des Bildes"/>
       </div>
   </div>
   )
 
+}
+
+function getAboutUs(): any {
+  
+  console.log(abteilungen);
+  return abteilungen;
 }
