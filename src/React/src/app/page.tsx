@@ -14,9 +14,7 @@ export default async function Home() {
         <main>
             <h2>News</h2>
 
-            <h2>
-                Folge uns auf <span className='instagram'><a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/"> <FontAwesomeIcon icon={faInstagram}/> Instagram</a></span>
-            </h2>
+            
             <InstagramFeed feed={instaFeed}/>
             
             
@@ -32,6 +30,10 @@ export function InstagramFeed({feed}:any) {
     if(feed){
     const images = feed.data;
     return (
+        <div>
+        <h2>
+                Folge uns auf <span className='instagram'><a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/"> <FontAwesomeIcon icon={faInstagram}/> Instagram</a></span>
+            </h2>
     <div className='insta-posts'>
         {images && images.map((image: any) => (
             <div key={image.id} className='post'>
@@ -42,6 +44,7 @@ export function InstagramFeed({feed}:any) {
         ))
 
         }
+    </div>
     </div>
     )}
     else {

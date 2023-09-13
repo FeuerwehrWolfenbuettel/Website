@@ -182,23 +182,19 @@ footer {
   
 }
 
-
-.insta-post {
-  padding:4%;
-  display:flex;
+div.insta-posts {
+  padding:2%;
+  display: flex !important ;
   
 }
 
 .post {
   flex:1;
   flex-direction: row;
-  width: 20em;
+  max-width: 20%;
   padding: 1em;
   img {
     width: 100%
-  }
-  span {
-    display:block;
   }
 }
 
