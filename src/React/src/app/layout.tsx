@@ -1,4 +1,4 @@
-import './globals.css'
+import './globals.scss'
 import { Inter } from 'next/font/google'
 import React, { ReactNode } from 'react';
 import Image from 'next/image';
@@ -63,7 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 alt='instagram'
               />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/@schwerpunktfeuerwehrwolfen5008" target="_blank" rel="noopener noreferrer">
               <Image
                 className="not-last-image"
                 src="/icons/icons8-youtube-play.svg"

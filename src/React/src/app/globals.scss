@@ -1,14 +1,14 @@
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb:0, 0, 0;
+  --background-start-rgb:214, 219, 220;
+  --background-end-rgb:255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb:255, 255, 255;
+    --background-start-rgb:0, 0, 0;
+    --background-end-rgb:0, 0, 0;
   }
 }
 
@@ -17,7 +17,6 @@ body {
   background-color: rgb(214, 214, 214);
   font-family: "Helvetica", Arial, sans-serif;
 }
-
 
 /* Header mit Menu */
 
@@ -53,25 +52,25 @@ body {
   align-items: center;
   margin-top: calc(100vh * 0.05);
   margin-right: calc(100vw * 0.07);
-}
 
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 
-.menu ul li {
-  margin-right: 20px;
-}
+    li {
+      margin-right: 20px;
 
-.menu ul li a {
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.3s ease;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
 }
 
 .join-button {
@@ -99,7 +98,6 @@ body {
   white-space: nowrap;
   color: #BDDC06;
 }
-
 
 footer {
   width: 100%;
@@ -152,21 +150,71 @@ footer {
 
 .email {
   display: flex;
-}
 
-.email img {
-  width: 10%;
-  height: auto;
-  margin-right: 10px;
-}
+  img {
+    width: 10%;
+    height: auto;
+    margin-right: 10px;
+  }
 
-.email span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .first-span {
   margin-right: 75px;
 }
+
+.instagram {
+  display: inline-block;
+  height: 1em;
+  text-align: match-parent;
+  border-radius: 0px;
+  font-size: 1em;
+  line-height: 1em;
+  vertical-align: middle;
+  a {
+    text-decoration: none;
+    color: #d6249f;}
+  
+}
+
+
+.insta-post {
+  padding:4%;
+  display:flex;
+  
+}
+
+.post {
+  flex:1;
+  flex-direction: row;
+  width: 20em;
+  padding: 1em;
+  img {
+    width: 100%
+  }
+  span {
+    display:block;
+  }
+}
+
+.facebook {
+  display: inline-block;
+  height: 1em;
+  text-align: match-parent;
+  border-radius: 0px;
+  font-size: 1em;
+  line-height: 1em;
+  vertical-align: middle;
+  a {
+    text-decoration: none;
+    color: #4267B2;}
+  
+}
+
+
 
