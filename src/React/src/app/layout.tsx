@@ -13,18 +13,19 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <div className="splash">
+
+      </div>
       <body className={inter.className}>
         <div className="shape-container">
             <div className="shape">
-                <div className="logo_nav">
+                <div className="logo-nav">
                     <a href="/">
-                      <Image
-                        id="logo"
-                        src="/images/logo.png"
-                        width={75}
-                        height={72}
+                      <img 
+                        src="/assets/Logo with Text.png"
+                        
                         alt='Logo'
-                        priority={true}
+                        className="logo"
                       />
                     </a>
                     <nav className="menu">
@@ -38,11 +39,34 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                         <button className="join-button">Mitglied werden</button>
                     </nav>
                 </div>
+                <div className="animation-container">
                 <div className="text-container-landing">
-                    <span>Für dich im</span><br />
-                    <span className="sub-text-landing">Einsatz</span>
+                  <div className="first">
+                      <span>Für dich im</span><br />
+                  </div>
+                  <div className=" second">
+                      <span>Für eure</span><br />
+                  </div>
+                  <div className="third">
+                      <span>Stärker mit</span><br />
+                  </div>
                 </div>
+                
+                <div className='sub-text-landing'>
+                  <div>
+                    <span className="first">Einsatz</span><br/>
+                  </div>
+                  <div>
+                    <span className="second">Sicherheit</span><br/>
+                  </div>
+                  <div>
+                    <span className="third">dir</span><br/>
+                  </div>
+                </div>
+                </div>
+            
             </div>
+        
         </div>
         {children}
       </body>

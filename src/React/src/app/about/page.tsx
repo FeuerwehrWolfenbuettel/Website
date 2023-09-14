@@ -1,4 +1,4 @@
-import abteilungen from "./../../../assets/Abteilungen/abteilungen.json"
+import abteilungen from "../../../public/assets/Abteilungen/abteilungen.json"
 import './card.css'
 
 
