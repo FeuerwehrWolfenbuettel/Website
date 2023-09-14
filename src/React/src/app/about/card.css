@@ -1,29 +1,41 @@
-
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
   
   .card {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex:1;
+    display: flex;
     align-items: center;
     position: relative;
-    margin-right: 20px;
-    width: 33%;
-    height: 300px;
+    margin: 1.5em;
+    width: 33vw;
+    min-height: auto;
+    height: 40vh;
     
-    position: relative;
     /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
     transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
   }
   
   .picture {
+    display:flex;
     width: 94%;
     height: 90%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    justify-content: center;
+    
+    
     /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
     transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
+  }
+  .picture img {
+    object-fit: contain !important
   }
   
   .info {

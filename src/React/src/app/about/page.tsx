@@ -3,15 +3,18 @@ import './card.css'
 
 
 export default function About() {
-  const abteilungen = getAboutUs().abteilungen;
+  const abteilungen = getAboutUs();
   return (
     <main>
+      
       <h1>Über unsere Abteilungen</h1>
-        {abteilungen && abteilungen.map((abteilung:any) => (
+      <div className="card-container">
+        {abteilungen && abteilungen.abteilungen.map((abteilung:any) => (
             <Card aboutUs={abteilung} />
         ))
-  }
+  }</div>
     </main>
+    
   )
 }
 
@@ -35,6 +38,5 @@ function Card({aboutUs}: any) {
 
 function getAboutUs(): any {
   
-  console.log(abteilungen);
   return abteilungen;
 }
