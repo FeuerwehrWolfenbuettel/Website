@@ -67,9 +67,9 @@ body {
 
 .logo-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: space-between;
-  position: fixed;
+  
+  align-content: space-between;
+  
   flex: 0 0 100%;
 }
 
@@ -82,8 +82,11 @@ body {
 }
 
 .menu {
-  background-color: linear-gradient(to right, transparent 0%, black 25%);
-  
+ 
+  position: fixed;
+  margin-right:5%;
+  margin-left: max(40%,65%);
+  flex-wrap: wrap;
   float: right;
   display: flex;
   align-items: center;
@@ -100,7 +103,7 @@ body {
 
     li {
       margin-right: 20px;
-
+      display:flex;
       a {
         color: #fff;
         text-transform: uppercase;
