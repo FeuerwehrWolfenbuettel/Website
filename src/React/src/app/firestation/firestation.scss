@@ -1,0 +1,67 @@
+
+.page-title {
+    margin-left: 2em;
+}
+.firestation {
+    display: flex;
+    .firestation-text {
+        display:flex;
+        
+        word-wrap: wrap;
+        margin-left: 4em;
+        flex-direction: column;
+        p {
+            display:flex;
+            font-size: 1.5em; 
+        }
+    }
+    .firestation-picture {
+        display:flex;
+        margin:2em;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+        
+        /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+        transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 94%;
+            height: 90%;
+            background-color: #212121;
+            z-index: 1;
+            opacity: 0;
+            /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+            transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
+        }
+        a {
+            text-decoration: none;
+        }
+        .headline h1 {
+            text-transform: uppercase;
+            font-family: verdana;
+            text-align: center;
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+          }
+}
+
+
+    .firestation-picture:hover {
+        clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
+        background-color: #bddc06;
+        .info {
+            clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
+            opacity: 0.75;
+        }   
+    }
+
+
+}
+

@@ -33,16 +33,56 @@ export function AlarmTicker() {
 }
 
 export function NewsFeed({ feed }: any) {
+  const articles = feed.articles;
+  console.log(articles);
+  
   return (
     <div>
       <h2> News </h2>
-      Hier kommen News hin
+      <div>
+      {articles && articles.map((article:any) => {
+        <div className="news-preview">
+        <NewsPreview article={article}/>
+        </div>
+      })}
+      </div>
     </div>
   );
 }
 
+export function NewsPreview({ article }: any) {
+  console.log(article);
+  
+  return (
+    <div className='content'>
+    <div className='content-with-picture'>
+                <img
+                    src="/images/Gesamtbild-Feuerwehr-Wolfenbüttel.jpg"
+                    className="news-Picture"
+                    alt={article.summary}
+                />
+                <div className='text-content'>
+                    <div className='header-stripe-with-text'>
+                        <div className='header-stripe-container'>
+                            <div className='header-stripe'></div>
+                        </div>
+                        <div className='header'>
+                            <span>{article.title}</span>
+                            
+                        </div>
+                    </div>
+                    <div className='flowing-text'>
+                        <p>{article.summary}</p>
+                    </div>
+                    <button className='continue-button'>Weiter lesen</button>
+                </div>
+              </div>
+          </div>
+  )
+}
+
 async function getNewsFeed(): Promise<any> {
-  const url = "localhost:3002/article";
+  const url = "http://localhost:3002/article";
   const res = await fetch(url, { next: { revalidate: 60 } });
   const newsFeed = res.json();
   return newsFeed;
