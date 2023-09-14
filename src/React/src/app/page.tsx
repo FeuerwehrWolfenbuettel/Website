@@ -33,6 +33,10 @@ export function NewsFeed() {
     )
 }
 
+async function getNewsFeed(): Promise<any> {
+
+}
+
 
 export function InstagramFeed({feed}:any) {
     
@@ -74,7 +78,7 @@ export function InstagramFeed({feed}:any) {
    
  async function getInstagramFeed(): Promise<any> {
     const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-    const data = await fetch(url, { next: { revalidate: 3000 } });
+    const data = await fetch(url, { next: { revalidate: 10 } });
     const feed = await data.json();
     
     
