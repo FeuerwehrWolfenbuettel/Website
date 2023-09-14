@@ -78,14 +78,24 @@ body {
   display: flex;
   margin-top: calc(100vh * 0.022);
   margin-left: 11%;
+  position:fixed;
  
 }
 
+.logo-invert {
+  filter: invert(1);
+}
+
+.menu::after{
+  a{
+    color:#000
+  }
+}
 .menu {
  
   position: fixed;
   margin-right:5%;
-  margin-left: max(40%,65%);
+  margin-left: 55vw;
   flex-wrap: wrap;
   float: right;
   display: flex;
@@ -112,6 +122,13 @@ body {
         transition: transform 0.3s ease;
       }
     }
+  }
+}
+
+.menu-inverted{
+  
+  a{
+    color:#000 !important;
   }
 }
 
@@ -144,8 +161,11 @@ body {
   text-align: right;
   font-size: 5.2rem;
   float: right;
+  pointer-events: none;
   padding-top: 10rem;
   margin-right: 11%;
+  margin-left: 60vw;
+  position:fixed;
 }
 
 .text-container-landing {
