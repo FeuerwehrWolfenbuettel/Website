@@ -12,27 +12,18 @@ export default async function Home() {
   const newsFeed = await getNewsFeed();
   return (
     <main className="home-page">
-      <AlarmTicker />
 
       <NewsFeed feed={newsFeed} />
 
-      <InstagramFeed feed={instaFeed} />
+     {/*}<InstagramFeed feed={instaFeed} />*/}
+     <InstagramCoulBeFeed />
 
       <FacebookFeed />
     </main>
   );
 }
 
-export function AlarmTicker() {
-  return (
-    <div>
-      <h2> Unsere letzten Alarme</h2>
-      Hier könnte Ihr Alarmticker sein
-    </div>
-  );
-}
-
-export function NewsFeed({ feed }: any) {
+function NewsFeed({ feed }: any) {
   const articles = feed.articles;
   console.log(articles);
   
@@ -50,7 +41,7 @@ export function NewsFeed({ feed }: any) {
   );
 }
 
-export function NewsPreview({ article }: any) {
+function NewsPreview({ article }: any) {
   console.log(article);
   
   return (
@@ -88,7 +79,29 @@ async function getNewsFeed(): Promise<any> {
   return newsFeed;
 }
 
-export function InstagramFeed({ feed }: any) {
+function InstagramCoulBeFeed() {
+  return (
+    <div>
+        <h2>
+          Folge uns auf{" "}
+          <span className="instagram">
+            <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/">
+              {" "}
+              <FontAwesomeIcon icon={faInstagram} /> Instagram
+            </a>
+          </span>
+        </h2>
+        <div>
+          Hier könnte Ihr Instafeed sein
+        </div>
+        
+        </div>
+  )
+
+}
+
+
+function InstagramFeed({ feed }: any) {
   if (feed) {
     const images = feed.data;
     return (

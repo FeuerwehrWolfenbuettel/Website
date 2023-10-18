@@ -10,7 +10,10 @@ export default function About() {
       <h1>Über unsere Abteilungen</h1>
       <div className="card-container">
         {abteilungen && abteilungen.abteilungen.map((abteilung:any) => (
+          <div key={abteilung.id}>
             <Card aboutUs={abteilung} />
+          </div>
+        
         ))
   }</div>
     </main>
