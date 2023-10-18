@@ -12,3 +12,26 @@
 - Imprint
 - Possibility to create tinyURL to share news or events via social media
 - Social media implementation to show feeds on the website
+
+# Requirements für den Release zum 01.12.2023 
+- Sponsorenanzeige auf der homepage 
+- Fahrzeuginformationen
+-
+- Aufräumen der CSS Files
+- statische Homepade mit Sponsorenbanner -> Als Infopage
+- Förderverein ist vertraglich gebunden
+- Abteilungen getrennt darstellen -> Förderverein/Feuerwehr
+- Formulare für Anmeldung 
+- Terminfindung für Absprache mit Ortsbrandmeister einstellen können.
+- Interner Mitgliederbereich -> Evtl. über Divera?
+- Analytics -> Nach URL-Herkunft & Ziel
+- Einbettung Youtube für Podcasts
+- Fahrzeuge:
+  - Wie darstellen? -> Unsere Idee war cool, aber wie technisch
+  - Einfacher Editor (nicht unbedingt 1. Release)
+
+- Einsatzticker: 
+  - Live Ticker nicht so überzeugend -> Moderiert oder verpätet
+  - Anonymisiert Abkürzungs dictionary
+
+- link shortener 
