@@ -9,14 +9,14 @@ config.autoAddCss = false;
 
 export default async function Home() {
   const instaFeed = await getInstagramFeed();
-  const newsFeed = await getNewsFeed();
+  //const newsFeed = await getNewsFeed();
   return (
     <main className="home-page">
+      {/*<NewsFeed feed={newsFeed} />*/}
+      <NewsPreview />
 
-      <NewsFeed feed={newsFeed} />
-
-     {/*}<InstagramFeed feed={instaFeed} />*/}
-     <InstagramCoulBeFeed />
+      <InstagramFeed feed={instaFeed} />
+      {/*<InstagramCoulBeFeed />*/}
 
       <FacebookFeed />
     </main>
@@ -26,16 +26,17 @@ export default async function Home() {
 function NewsFeed({ feed }: any) {
   const articles = feed.articles;
   console.log(articles);
-  
+
   return (
     <div>
       <h2> News </h2>
       <div>
-      {articles && articles.map((article:any) => {
-        <div className="news-preview">
-        <NewsPreview article={article}/>
-        </div>
-      })}
+        {articles &&
+          articles.map((article: any) => {
+            <div className="news-preview">
+              <NewsPreview article={article} />
+            </div>;
+          })}
       </div>
     </div>
   );
@@ -43,33 +44,32 @@ function NewsFeed({ feed }: any) {
 
 function NewsPreview({ article }: any) {
   console.log(article);
-  
+
   return (
-    <div className='content'>
-    <div className='content-with-picture'>
-                <img
-                    src="/images/Gesamtbild-Feuerwehr-Wolfenbüttel.jpg"
-                    className="news-Picture"
-                    alt={article.summary}
-                />
-                <div className='text-content'>
-                    <div className='header-stripe-with-text'>
-                        <div className='header-stripe-container'>
-                            <div className='header-stripe'></div>
-                        </div>
-                        <div className='header'>
-                            <span>{article.title}</span>
-                            
-                        </div>
-                    </div>
-                    <div className='flowing-text'>
-                        <p>{article.summary}</p>
-                    </div>
-                    <button className='continue-button'>Weiter lesen</button>
-                </div>
-              </div>
+    <div className="content">
+      <div className="content-with-picture">
+        <img
+          src="/images/Gesamtbild-Feuerwehr-Wolfenbüttel.jpg"
+          className="news-Picture"
+          alt={"article.summary"}
+        />
+        <div className="text-content">
+          <div className="header-stripe-with-text">
+            <div className="header-stripe-container">
+              <div className="header-stripe"></div>
+            </div>
+            <div className="header">
+              <span>{"article.title"}</span>
+            </div>
           </div>
-  )
+          <div className="flowing-text">
+            <p>{"article.summary"}</p>
+          </div>
+          <button className="continue-button">Weiter lesen</button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 async function getNewsFeed(): Promise<any> {
@@ -82,24 +82,19 @@ async function getNewsFeed(): Promise<any> {
 function InstagramCoulBeFeed() {
   return (
     <div>
-        <h2>
-          Folge uns auf{" "}
-          <span className="instagram">
-            <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/">
-              {" "}
-              <FontAwesomeIcon icon={faInstagram} /> Instagram
-            </a>
-          </span>
-        </h2>
-        <div>
-          Hier könnte Ihr Instafeed sein
-        </div>
-        
-        </div>
-  )
-
+      <h2>
+        Folge uns auf{" "}
+        <span className="instagram">
+          <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/">
+            {" "}
+            <FontAwesomeIcon icon={faInstagram} /> Instagram
+          </a>
+        </span>
+      </h2>
+      <div>Hier könnte Ihr Instafeed sein</div>
+    </div>
+  );
 }
-
 
 function InstagramFeed({ feed }: any) {
   if (feed) {
@@ -135,7 +130,7 @@ function InstagramFeed({ feed }: any) {
 
 async function getInstagramFeed(): Promise<any> {
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(url, { next: { revalidate: 10 } });
+  const data = await fetch(url, { next: { revalidate: 3600 } });
   const feed = await data.json();
 
   return feed;
