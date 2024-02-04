@@ -79,23 +79,6 @@ async function getNewsFeed(): Promise<any> {
   return newsFeed;
 }
 
-function InstagramCoulBeFeed() {
-  return (
-    <div>
-      <h2>
-        Folge uns auf{" "}
-        <span className="instagram">
-          <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/">
-            {" "}
-            <FontAwesomeIcon icon={faInstagram} /> Instagram
-          </a>
-        </span>
-      </h2>
-      <div>Hier könnte Ihr Instafeed sein</div>
-    </div>
-  );
-}
-
 function InstagramFeed({ feed }: any) {
   if (feed) {
     const images = feed.data;
@@ -128,12 +111,29 @@ function InstagramFeed({ feed }: any) {
   }
 }
 
-async function getInstagramFeed(): Promise<any> {
+/*async function getInstagramFeed(): Promise<any> {
   const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
   const data = await fetch(url, { next: { revalidate: 3600 } });
   const feed = await data.json();
 
   return feed;
+}*/
+
+async function getInstagramFeed(): Promise<any> {
+  try {
+    const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
+    const data = await fetch(url, { next: { revalidate: 3600 } });
+
+    if (!data.ok) {
+      throw new Error("Instagram API-Anfrage fehlgeschlagen");
+    }
+
+    const feed = await data.json();
+    return feed;
+  } catch (error) {
+    console.error("Fehler beim Abrufen des Instagram-Feeds:", error);
+    return { data: [] };
+  }
 }
 
 function FacebookFeed() {
