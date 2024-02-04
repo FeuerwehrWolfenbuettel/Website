@@ -1,22 +1,20 @@
 import "./globals.scss";
-import Head from "next/head";
-import styles from "../app/page.module.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import InstagramFeed from "./components/instagram/instagram_feed";
+
 config.autoAddCss = false;
 
 export default async function Home() {
-  const instaFeed = await getInstagramFeed();
+  //const instaFeed = await getInstagramFeed();
   //const newsFeed = await getNewsFeed();
   return (
     <main className="home-page">
-      {/*<NewsFeed feed={newsFeed} />*/}
       <NewsPreview />
 
-      <InstagramFeed feed={instaFeed} />
-      {/*<InstagramCoulBeFeed />*/}
+      <InstagramFeed/>
 
       <FacebookFeed />
     </main>
@@ -79,36 +77,53 @@ async function getNewsFeed(): Promise<any> {
   return newsFeed;
 }
 
-function InstagramFeed({ feed }: any) {
-  if (feed) {
-    const images = feed.data;
-    return (
-      <div>
-        <h2>
-          Folge uns auf{" "}
-          <span className="instagram">
-            <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/">
-              {" "}
-              <FontAwesomeIcon icon={faInstagram} /> Instagram
-            </a>
-          </span>
-        </h2>
-        <div className="insta-posts">
+/*function InstagramFeed({feed}: any) {
+  const images = feed.data;
+  return (
+      <div className="instagram_feed">
+    	  <div className="instagram_titel">
+          <h1>
+            Neues von unserem{" "}
+            <span>
+              <a href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/">
+                {" "}
+                <FontAwesomeIcon icon={faInstagram} /> Instagram
+              </a>
+            </span>
+          </h1>
+        </div>
+        <div className="instagram_posts">
           {images &&
-            images.slice(0, 5).map((image: any) => (
-              <div key={image.id} className="post">
-                <a href={image.permalink}>
-                  <img src={image.media_url} alt={image.caption} />
-                  <span>{image.caption}</span>
-                </a>
+            images.slice(0, 3).map((image: any) => (
+          <div key={image.id} className="instagram_tile">
+            <div className="instagram_tile_header">
+              <img className="instagram_tile_header_picture"
+                  src="/assets/Logo Big Black BG.png" 
+                  alt="Instagram Logo Ortsfeuerwehr Wolfenbüttel" 
+                />
+              <div className="instagram_tile_header_text_container">
+                <p className="instagram_tile_header_name">
+                  Ortsfeuerwehr_Wolfenbüttel
+                </p>
+                <p className="instagram_tile_header_date">
+                  04. OKT 2024
+                </p>
               </div>
-            ))}
+            </div>
+            <a href={image.permalink}>
+              <img className="instagram_tile_picture" 
+                  src={image.media_url}
+                  alt={image.caption} 
+                />
+            </a>
+            <div className="instagram_tile_caption">
+              <p className="instagram_tile_caption_text">{image.caption}</p>
+            </div>
+          </div>
+            ))}  
         </div>
       </div>
-    );
-  } else {
-    return <div>Hier soll ein Feed hin</div>;
-  }
+  );
 }
 
 async function getInstagramFeed(): Promise<any> {
@@ -121,12 +136,13 @@ async function getInstagramFeed(): Promise<any> {
     }
 
     const feed = await data.json();
+    
     return feed;
   } catch (error) {
     console.error("Fehler beim Abrufen des Instagram-Feeds:", error);
     return { data: [] };
   }
-}
+}*/
 
 function FacebookFeed() {
   return (
