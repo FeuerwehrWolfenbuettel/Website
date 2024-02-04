@@ -79,7 +79,6 @@ async function getNewsFeed(): Promise<any> {
 
 function InstagramFeed({feed}: any) {
   const images = feed.data;
-  const username = feed.username;
   return (
       <div className="instagram_feed">
     	  <div className="instagram_titel">
