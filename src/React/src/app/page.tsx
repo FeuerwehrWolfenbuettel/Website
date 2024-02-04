@@ -1,20 +1,20 @@
 import "./globals.scss";
-import Head from "next/head";
-import styles from "../app/page.module.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import InstagramFeed from "./components/instagram/instagram_feed";
+
 config.autoAddCss = false;
 
 export default async function Home() {
-  const instaFeed = await getInstagramFeed();
+  //const instaFeed = await getInstagramFeed();
   //const newsFeed = await getNewsFeed();
   return (
     <main className="home-page">
       <NewsPreview />
 
-      <InstagramFeed feed={instaFeed} />
+      <InstagramFeed/>
 
       <FacebookFeed />
     </main>
@@ -77,7 +77,7 @@ async function getNewsFeed(): Promise<any> {
   return newsFeed;
 }
 
-function InstagramFeed({feed}: any) {
+/*function InstagramFeed({feed}: any) {
   const images = feed.data;
   return (
       <div className="instagram_feed">
@@ -142,7 +142,7 @@ async function getInstagramFeed(): Promise<any> {
     console.error("Fehler beim Abrufen des Instagram-Feeds:", error);
     return { data: [] };
   }
-}
+}*/
 
 function FacebookFeed() {
   return (
