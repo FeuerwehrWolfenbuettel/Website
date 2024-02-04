@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(228, 228, 228);
   font-family: "Helvetica", Arial, sans-serif;
 }
 
@@ -330,61 +330,86 @@ footer {
   border: none;
 }
 
-.instagram {
-  display: inline-block;
-  height: 1em;
-  text-align: match-parent;
-  border-radius: 0px;
-  font-size: 1em;
-  line-height: 1em;
-  vertical-align: middle;
-  a {
-    text-decoration: none;
-    color: #d6249f;}
-  
+.instagram_titel {
+  padding-top: 200px;
+  padding-left: 11%;
 }
 
-div.insta-posts {
-  padding:2%;
-  display: flex !important ;
-  
+.instagram_posts {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
 }
 
-.post {
-  flex:1;
-  flex-direction: row;
-  max-width: 20%;
-  padding: 0.5em;
-  margin: 0.5em;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-  transition: all 0.5s cubic-bezier(0.04, 1.02, 0.53, 0.96);
-  img {
-    width: 100%;
-
-  }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-   
-  span {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-   
-  }
-   
+.instagram_tile {
+  width: 360px;
+  height: 530px;
+  margin-right: 80px;
+  background-color: black;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.post:hover {
-  clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
-  background-color: #bddc06;
-  span {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-  }     
+.instagram_tile_header {
+  display: flex;
+  justify-content: left;
+  margin-top: 25px;
+  margin-left: 15px;
+  text-align: left;
 }
 
+.instagram_tile_header_picture {
+  width: 75px;
+  height: 73px;
+  border-radius: 5px;
+}
+
+.instagram_tile_header_text_container {
+  margin: 0px;
+  display: block;
+}
+
+.instagram_tile_header_name {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.instagram_tile_header_date {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 9px;
+}
+
+.instagram_icon {
+  width: 32px;
+  height: 32px;
+}
+
+.instagram_tile_picture {
+  margin-top: 20px;
+  width: 330px;
+  height: 330px;
+  border-radius: 5px;
+}
+
+.instagram_tile_caption {
+  text-align: left;
+}
+
+.instagram_tile_caption_text{
+  margin-left: 15px;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  font-family: "Helvetica", Arial, sans-serif;
+}
 
 .facebook {
   display: inline-block;
