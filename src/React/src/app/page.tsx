@@ -111,14 +111,6 @@ function InstagramFeed({ feed }: any) {
   }
 }
 
-/*async function getInstagramFeed(): Promise<any> {
-  const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
-  const data = await fetch(url, { next: { revalidate: 3600 } });
-  const feed = await data.json();
-
-  return feed;
-}*/
-
 async function getInstagramFeed(): Promise<any> {
   try {
     const url = `https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp,media_type,permalink&access_token=${process.env.INSTAGRAM_KEY}`;
