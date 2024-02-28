@@ -1,8 +1,7 @@
 import "./globals.scss";
 import { Inter } from "next/font/google";
-import React, { ReactNode } from "react";
-import Image from "next/image";
-
+import React, { ReactNode, useState } from "react";
+import BurgerMenu from "./components/burger-menu/burger-menu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,165 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <div className="splash"></div>
-      <body className={inter.className}>
-        <div className="logo-nav">
-          <a href="/">
-            <img
-              src="/assets/Logo with Text.png"
-              alt="Logo"
-              className="logo logo-invert"
-            />
-          </a>
-        </div>
-
-        <nav className="menu menu-inverted">
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">Über uns</a>
-            </li>
-            <li>
-              <a href="/firestation">Feuerwache</a>
-            </li>
-            <li>
-              <a href="/vehicles">Fahrzeuge</a>
-            </li>
-            <li>
-              <a href="/contact">Kontakt</a>
-            </li>
-          </ul>
-          <button className="join-button">Mitglied werden</button>
-        </nav>
-        <div className="shape-container">
-          <div className="shape">
-            <div className="logo-nav">
-              <a href="/">
-                <img
-                  src="/assets/Logo with Text.png"
-                  alt="Logo"
-                  className="logo"
-                />
-              </a>
-              <nav className="menu">
-                <ul>
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>
-                    <a href="/about">Über uns</a>
-                  </li>
-                  <li>
-                    <a href="/firestation">Feuerwache</a>
-                  </li>
-                  <li>
-                    <a href="/vehicles">Fahrzeuge</a>
-                  </li>
-                  <li>
-                    <a href="/contact">Kontakt</a>
-                  </li>
-                </ul>
-                <button className="join-button">Mitglied werden</button>
-              </nav>
-            </div>
-            <div className="animation-container">
-              <div className="text-container-landing">
-                <div className="first">
-                  <span>Für dich im</span>
-                  <br />
-                </div>
-                <div className=" second">
-                  <span>Für eure</span>
-                  <br />
-                </div>
-                <div className="third">
-                  <span>#jazur</span>
-                  <br />
-                </div>
-              </div>
-
-              <div className="sub-text-landing">
-                <div>
-                  <span className="first">Einsatz</span>
-                  <br />
-                </div>
-                <div>
-                  <span className="second">Sicherheit</span>
-                  <br />
-                </div>
-                <div>
-                  <span className="third">Feuerwehr</span>
-                  <br />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {children}
+    <html>
+      <body>
+        <BurgerMenu/>
       </body>
-
-      <footer>
-        <div className="name-and-social-media">
-          <div className="text-container-footer">
-            <span>Schwerpunktfeuerwehr</span>
-            <br />
-            <span className="sub-text-footer">Wolfenbüttel</span>
-          </div>
-          <div className="social-media-icon">
-            <a
-              href="https://www.instagram.com/ortsfeuerwehr_wolfenbuettel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className="not-last-image"
-                src="/icons/icons8-instagram.svg"
-                height={40}
-                width={40}
-                alt="instagram"
-              />
-            </a>
-            <a
-              href="https://www.youtube.com/@schwerpunktfeuerwehrwolfen5008"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className="not-last-image"
-                src="/icons/icons8-youtube-play.svg"
-                height={40}
-                width={40}
-                alt="youtube"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/ortsfeuerwehrwolfenbuettel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/icons/icons8-facebook.svg"
-                width={40}
-                height={40}
-                alt="facebook"
-              />
-            </a>
-          </div>
-        </div>
-        <div className="email-and-policy">
-          <div className="email">
-            <img src="/icons/icons8-email.svg" alt="email" />
-            <span>info@Schwerpunktfeuerwehrwf.de</span>
-          </div>
-          <div className="privacy-policy">
-            <span className="first-span">Privacy policy</span>
-            <span>Terms & Condition</span>
-          </div>
-        </div>
-      </footer>
     </html>
   );
 }
