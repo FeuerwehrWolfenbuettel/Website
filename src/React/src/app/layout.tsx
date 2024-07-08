@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./layout.scss";
 import React, { ReactNode } from "react";
 import NavBar from '../components/NavBar/NavBar';
+import Footer from "../components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Schwerpunktfeuerwehr Wolfenbüttel",
@@ -14,6 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

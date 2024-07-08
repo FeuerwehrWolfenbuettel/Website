@@ -1,0 +1,142 @@
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    font-family: "Helvetica", Arial, sans-serif;
+}
+  
+  .nameAndSocialMedia {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
+  
+  .textContainerFooter {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    font-weight: bolder;
+    font-size: 2.5vw;
+  }
+  
+  .subtextFooter {
+    white-space: nowrap;
+    color: #BDDC06;
+  }
+  
+  .socialMediaIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .notLastImage {
+    margin-right: 10px;
+  }
+  
+  .emailAndPolicy {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 3vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
+  
+  .email {
+    display: flex;
+  
+    img {
+      width: 10%;
+      height: auto;
+      margin-right: 10px;
+    }
+  
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      width: 100%;
+      height: auto;
+      background-color: rgb(0, 0, 0);
+      font-family: "Helvetica", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Neu hinzugefügt, um die Elemente mittig zu zentrieren */
+    }
+  
+    .nameAndSocialMedia {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Neu hinzugefügt, um die Elemente mittig zu zentrieren */
+      padding-top: 3vh;
+      margin-left: 6vw;
+      margin-right: 6vw;
+    }
+  
+    .textContainerFooter {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center; /* Geändert von 'left' auf 'center' */
+      font-weight: bolder;
+      font-size: 5vw;
+    }
+  
+    .subtextFooter {
+      white-space: nowrap;
+      color: #BDDC06;
+      text-align: center; /* Neu hinzugefügt, um den Text zu zentrieren */
+    }
+  
+    .socialMediaIcon {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Geändert von 'flex-end' auf 'center' */
+    }
+  
+    .notLastImage {
+      margin-right: 10px;
+    }
+  
+    .emailAndPolicy {
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Neu hinzugefügt, um die Elemente mittig zu zentrieren */
+      margin-top: 40px;
+      padding-bottom: 3vh;
+      margin-left: 6vw;
+      margin-right: 6vw;
+    }
+  
+    .email {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Neu hinzugefügt, um die Elemente mittig zu zentrieren */
+      padding-bottom: 5px;
+
+      img {
+        display: none;
+      }
+  
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  
