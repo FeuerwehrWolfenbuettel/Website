@@ -1,0 +1,98 @@
+.header {
+    background-color: #333333;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 6vw;
+  }
+  
+  .menuIcon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLinks li {
+    margin-left: 20px;
+  }
+  
+  .navLinks a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .headerButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #444;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+  }
+  
+  .headerButton:hover {
+    background-color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      padding: 0 4vw;
+    }
+  
+    .navLinks {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #333333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+    }
+  
+    .navLinks li {
+      margin: 0;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 1px solid #44444414;
+    }
+  
+    .navLinks li:first-child {
+      border-top: none;
+    }
+  
+    .menuIcon {
+      display: block;
+    }
+  
+    .headerButton {
+      display: none; /* Verstecke den Button im mobilen Layout */
+    }
+  }
+  
+  .navLinks.active {
+    display: flex;
+  }
+  

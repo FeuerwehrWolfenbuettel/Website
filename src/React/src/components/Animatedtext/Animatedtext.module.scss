@@ -1,0 +1,95 @@
+.animationContainer {
+  justify-content: right;
+  font-weight: bolder;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: right;
+  font-size: 9vh;
+  float: right;
+  pointer-events: none;
+  margin-right: 6vw;
+  padding-top: 100px;
+}
+
+.textContainerLanding {
+  color: #fff;
+  height: 12vh;
+  overflow: hidden;
+}
+
+.textContainerLanding div:first-child {
+  animation: textAnimation 16s infinite;
+}
+
+.subTextLanding {
+  white-space: nowrap;
+  color: #BDDC06;
+  height: 12vh;
+  overflow: hidden;
+}
+
+.subTextLanding div:first-child {
+  animation: textAnimation 16s infinite;
+}
+
+@keyframes textAnimation {
+  0% {margin-top: 0;}
+  10% {margin-top: 0;}
+  20% {margin-top: -14vh;}
+  30% {margin-top: -14vh;}
+  40% {margin-top: -28vh;}
+  60% {margin-top: -28vh;}
+  70% {margin-top: -14vh;}
+  80% {margin-top: -14vh;}
+  90% {margin-top: 0;}
+  100% {margin-top: 0;}
+}
+
+@media (max-width: 768px) {
+  .animationContainer {
+    justify-content: right;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: right;
+    font-size: 6vh;
+    float: right;
+    pointer-events: none;
+    margin-right: 4vw;
+    padding-top: 100px;
+  }
+  
+  .textContainerLanding {
+    color: #fff;
+    height: 8vh;
+    overflow: hidden;
+  }
+  
+  .textContainerLanding div:first-child {
+    animation: textAnimation 16s infinite;
+  }
+  
+  .subTextLanding {
+    white-space: nowrap;
+    color: #BDDC06;
+    height: 8vh;
+    overflow: hidden;
+  }
+  
+  .subTextLanding div:first-child {
+    animation: textAnimation 16s infinite;
+  }
+  
+  @keyframes textAnimation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -9vh;}
+    30% {margin-top: -9vh;}
+    40% {margin-top: -18vh;}
+    60% {margin-top: -18vh;}
+    70% {margin-top: -9vh;}
+    80% {margin-top: -9vh;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+  }
+}
