@@ -1,86 +1,86 @@
 .card-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-  
-  .card {
     display: flex;
     flex-direction: row;
-    flex:1;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin: 1.5em;
-    width: 33vw;
-    min-height: auto;
-    height: 40vh;
+    flex-wrap: wrap;
+  }
     
-    /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-    transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
-  }
-  
-  .picture {
-    display:flex;
-    width: 94%;
-    height: 90%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    .card {
+      display: flex;
+      flex-direction: row;
+      flex:1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin: 1.5em;
+      width: 33vw;
+      min-height: auto;
+      height: 40vh;
+      
+      /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+      transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
+    }
     
+    .picture {
+      display:flex;
+      width: 94%;
+      height: 90%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      
+      
+      /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+      transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
+    }
+    .picture img {
+      object-fit: contain !important
+    }
     
-    /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-    transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
-  }
-  .picture img {
-    object-fit: contain !important
-  }
-  
-  .info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 94%;
-    height: 90%;
-    background-color: #212121;
-    z-index: 1;
-    opacity: 0;
-    /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-    transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
-  }
-  
-  .headline {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    padding-bottom: 40px;
-  }
-  
-  .headline h1 {
-    text-transform: uppercase;
-    font-family: verdana;
-    text-align: center;
-    font-size: 35px;
-    color: rgb(255, 255, 255);
-  }
-  
-  .card:hover {
-    /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
-    clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
-    background-color: #bddc06;
-  }
-  
-  .card:hover .picture {
-    /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
-    clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
-  }
-  
-  .card:hover .info {
-    /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
-    clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
-    opacity: 0.75;
-  }
+    .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 94%;
+      height: 90%;
+      background-color: #212121;
+      z-index: 1;
+      opacity: 0;
+      /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
+      transition: all 0.3s cubic-bezier(0.04, 1.02, 0.53, 0.96);
+    }
+    
+    .headline {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      padding-bottom: 40px;
+    }
+    
+    .headline h1 {
+      text-transform: uppercase;
+      font-family: verdana;
+      text-align: center;
+      font-size: 35px;
+      color: rgb(255, 255, 255);
+    }
+    
+    .card:hover {
+      /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+      clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
+      background-color: #bddc06;
+    }
+    
+    .card:hover .picture {
+      /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+      clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
+    }
+    
+    .card:hover .info {
+      /*(upper top left, top right, upper bottom right, bottom right, bottom left, top left)*/
+      clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
+      opacity: 0.75;
+    }
