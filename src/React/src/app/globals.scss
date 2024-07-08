@@ -16,7 +16,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(214, 214, 214);
+  background-color: rgb(228, 228, 228);
   font-family: "Helvetica", Arial, sans-serif;
 }
 
@@ -330,62 +330,7 @@ footer {
   border: none;
 }
 
-.instagram {
-  display: inline-block;
-  height: 1em;
-  text-align: match-parent;
-  border-radius: 0px;
-  font-size: 1em;
-  line-height: 1em;
-  vertical-align: middle;
-  a {
-    text-decoration: none;
-    color: #d6249f;}
   
-}
-
-div.insta-posts {
-  padding:2%;
-  display: flex !important ;
-  
-}
-
-.post {
-  flex:1;
-  flex-direction: row;
-  max-width: 20%;
-  padding: 0.5em;
-  margin: 0.5em;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-  transition: all 0.5s cubic-bezier(0.04, 1.02, 0.53, 0.96);
-  img {
-    width: 100%;
-
-  }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-   
-  span {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-   
-  }
-   
-}
-
-.post:hover {
-  clip-path: polygon(30% 0%, 100% 0%, 100% 85%, 70% 100%, 0% 100%, 0% 15%);
-  background-color: #bddc06;
-  span {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%, 0% 0%);
-  }     
-}
-
-
 .facebook {
   display: inline-block;
   height: 1em;
