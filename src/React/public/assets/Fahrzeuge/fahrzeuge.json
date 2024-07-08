@@ -1,0 +1,159 @@
+{
+    "vehicles": [
+        {
+            "id":1,
+            "name":"TLF 1",
+            "type":"Tanklöschfahrzeug 16/25",
+            "titlePicture":"/assets/Fahrzeuge/TLF1.png",
+            "year":1994,
+            "description":"1. Fahrzeug im Löschzug"
+        },
+        {
+            "id":2,
+            "name":"DLK",
+            "type":"Drehleiter mit Korb 23/12",
+            "titlePicture":"/assets/Fahrzeuge/DLK.png",
+            "year":2004,
+            "description":"Das Hubrettungsfahrzeug der Stadt Wolfenbüttel"
+
+            
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        }
+        
+    ]
+}

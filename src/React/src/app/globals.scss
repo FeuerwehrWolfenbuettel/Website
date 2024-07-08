@@ -22,11 +22,6 @@ body {
 
 /* Header mit Menu */
 
-@keyframes startup-container {
-    0% {height:100vh}
-    90%{height: 100vh}
-    100%{height: calc(100vh * 0.8)}
-}
 
 .shape-container {
   position: relative;
@@ -34,21 +29,6 @@ body {
   height: calc(100vh * 0.8);
   overflow: hidden;
 }
-
-@keyframes startup {
-  0% { clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-       background-image: linear-gradient(to right, transparent 0%, black 100%), url(landing.jpeg); 
-      }
-  90% { clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-    background-image: linear-gradient(to right, transparent 0%, black 100%), url(landing.jpeg); 
-   }
-  100% {  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 80%);
-    background-image: linear-gradient(to right, transparent 0%, black 75%), url(landing.jpeg);
-   } 
-  
-
-}
-
 .shape {
   position: absolute;
   top: 0;

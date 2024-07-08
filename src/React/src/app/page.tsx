@@ -14,7 +14,7 @@ export default async function Home() {
     <main className="home-page">
       <NewsPreview />
 
-      <InstagramFeed/>
+      <InstagramFeed />
 
       <FacebookFeed />
     </main>
@@ -57,11 +57,15 @@ function NewsPreview({ article }: any) {
               <div className="header-stripe"></div>
             </div>
             <div className="header">
-              <span>{"article.title"}</span>
+              <span>160 Jahre Feurewehr Weolfenbüttel</span>
             </div>
           </div>
           <div className="flowing-text">
-            <p>{"article.summary"}</p>
+            <p>
+              (Symbolbild 150 Jahrfeier) <br />
+              Es ist dieses Jahr soweit! Die Feuerwehr Wolfenbüttel feiert 160
+              jähriges bestehen. Dafür sind verschiedene Events geplant
+            </p>
           </div>
           <button className="continue-button">Weiter lesen</button>
         </div>
