@@ -1,0 +1,58 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 88vw;
+  max-width: 88vw;
+  background-color: chartreuse;
+}
+
+.imageContainer {
+  background-color: aqua;
+  min-width: 60vw;
+  width: 60vw;
+}
+
+.rightSite {
+  margin-left: 10px;
+  width: 40vw;
+  background-color: blueviolet;
+}
+
+.text {
+  background-color: aquamarine;
+}
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.headingStripe {
+  height: 54px;
+  width: 10px;
+  background-color: crimson;
+}
+
+.flowingTextFont {
+  font-size: 30px;
+}
+
+.headingFont {
+  font-size: 40px;
+}
+
+.buttonContainer {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+}
