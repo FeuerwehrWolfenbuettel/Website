@@ -1,6 +1,7 @@
 import "./page.scss";
 import AnimatedText from '../components/Animatedtext/AnimatedText'
 import ArticlePreView from "@/components/ArticlePreView/ArticlePreView";
+import InstagramFeed from "@/components/InstagramFeed/InstagramFeed";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </div>
       <section className="additional-content">
         <ArticlePreView />
+        <InstagramFeed />
       </section>
     </main>
   );

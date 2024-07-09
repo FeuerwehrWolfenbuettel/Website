@@ -1,0 +1,53 @@
+.instagramFeed {
+  margin-top: 50px;
+}
+
+.instagramPosts {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.instagramTile {
+  flex: 1;
+  max-width: 360px;
+  background-color: black;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instagramTileHeader {
+  display: flex;
+  justify-content: left;
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.instagramTileHeaderPicture {
+  width: 75px;
+  height: 73px;
+  border-radius: 5px;
+}
+
+.instagramTileHeaderTextContainer {
+  margin: 0px;
+  display: block;
+}
+
+.instagramTileHeaderName {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.instagramTileHeaderDate {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 9px;
+}
