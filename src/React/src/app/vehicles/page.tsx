@@ -28,15 +28,17 @@ function ShowFahrzeuge() {
 function RenderFahrzeug({ fahrzeug }: any) {
   return (
     <div className="vehicle">
-      <img src={fahrzeug.titlePicture}></img>
-      <div className="vehicle-text">
-        <h3>
-          <b>{fahrzeug.name}</b>
-          <br />
-          <p>{fahrzeug.type}</p>
-        </h3>
-        <p>{fahrzeug.description}</p>
-      </div>
+      <a href={`/vehicles/${fahrzeug.id}`}>
+        <img src={fahrzeug.titlePicture}></img>
+        <div className="vehicle-text">
+          <h3>
+            <b>{fahrzeug.name}</b>
+            <br />
+            <p>{fahrzeug.type}</p>
+          </h3>
+          <p>{fahrzeug.description}</p>
+        </div>
+      </a>
     </div>
   );
 }
