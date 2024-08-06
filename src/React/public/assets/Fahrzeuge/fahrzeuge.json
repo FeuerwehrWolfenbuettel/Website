@@ -7,7 +7,7 @@
             "titlePicture":"/assets/Fahrzeuge/TLF1.png",
             "year":1994,
             "description":"1. Fahrzeug im Löschzug",
-            "longDescription":"",
+            "longDescription":"<h2>Dieser lange Text soll darstellen wie das auf der Website wirkt</h2><br/>Das TLF 1 stellt seit 1994 im 1. Löschzug das erstausrückende Fahrzeug. Dafür ist es mit 2 Pressluftatemschutzgeräten in der Fahrerkabine ausgestattet und führt 2 weitere Pressluftatmer mit. Der 2500l fassende Wassertank kann genutzt werden bis eine Wasserversorung über das Hydrantennetz aufgebaut ist.",
             "tableValues": [{
                 
             }]
@@ -72,11 +72,11 @@
         },
         {
             "id":9,
-            "name":"GWL",
-            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "name":"GW-L",
+            "type":"Gerätewagen-Logistik",
             "titlePicture":"/assets/Fahrzeuge/GWL.png",
             "year":"200X",
-            "description":"Für diverse Zwecke aufrüstbar"
+            "description":"Für diverse Zwecke mit Rollcontainern aufrüstbar"
         }
         
         

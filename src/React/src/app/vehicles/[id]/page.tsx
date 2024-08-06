@@ -7,11 +7,12 @@ export default function Page({ params }: { params: { id: string } }) {
   return (
     <main>
       <h1>{vehicle?.name}</h1>
+      <div>{vehicle?.longDescription}</div>
     </main>
   );
 }
 
 function GetVehicle(id: any) {
   log(id);
-  return fahrzeuge.vehicles.find((element) => (element.id = id));
+  return fahrzeuge.vehicles.find((element) => element.id == id);
 }
