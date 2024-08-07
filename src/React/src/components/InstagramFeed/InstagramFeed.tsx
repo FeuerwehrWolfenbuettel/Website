@@ -3,6 +3,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import styles from './InstagramFeed.module.scss';
+import Image from 'next/image';
 
 async function getInstagramFeed(): Promise<any> {
   try {
@@ -43,19 +44,31 @@ async function InstagramFeed() {
               images.slice(0, 3).map((image: any) => (
               <div key={image.id} className={styles.instagramTile}>
                 <div className={styles.instagramTileHeader}>
-                  <img 
+                  <Image 
                     className={styles.instagramTileHeaderPicture}
                     src="/assets/Logo Big Black BG.png" 
                     alt="Instagram Logo Ortsfeuerwehr Wolfenbüttel" 
+                    width={75}
+                    height={73}
                   />
                   <div className={styles.instagramTileHeaderTextContainer}>
-                    <p className={styles.instagramTileHeaderName}>
+                    <h1 className={styles.instagramTileHeaderName}>
                       Ortsfeuerwehr_Wolfenbüttel
-                    </p>
-                    <p className={styles.instagramTileHeaderDate}>
+                    </h1>
+                    <h2 className={styles.instagramTileHeaderDate}>
                       04. OKT 2024
-                    </p>
+                    </h2>
                   </div>
+                </div>
+                <a href={image.permalink}>
+                <img
+                className={styles.instagramTilePicture} 
+                src={image.media_url} 
+                alt={image.caption}
+                />
+                </a>
+                <div className={styles.instagramTileCaption}>
+                  <p className={styles.instagramTileCaptionText}>{image.caption}</p>
                 </div>
               </div>
               ))} 
