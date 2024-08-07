@@ -1,73 +1,126 @@
 .instagramFeed {
   margin-top: 50px;
+  padding: 0 10px;  // Added padding to ensure the content doesn't touch the edges on smaller screens
+}
+
+.instagramTitel {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.instagramTitel h1 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.instagramTitel span a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .instagramPosts {
-  padding-top: 2%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .instagramTile {
-  flex: 1;
-  max-width: 360px;
-  background-color: black;
-  border-radius: 5px;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
   text-align: center;
-  margin-bottom: 20px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .instagramTileHeader {
   display: flex;
-  justify-content: left;
-  margin-top: 15px;
-  margin-left: 15px;
-  text-align: left;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
 }
 
 .instagramTileHeaderPicture {
-  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .instagramTileHeaderTextContainer {
-  margin: 0px;
-  display: block;
+  margin-left: 10px;
 }
 
 .instagramTileHeaderName {
-  color: #ffffff;
-  padding-left: 10px;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 .instagramTileHeaderDate {
-  color: #ffffff;
-  padding-left: 10px;
-  font-size: 9px;
+  font-size: 0.9em;
 }
 
-.instagramTilePicture {
-  margin-top: 20px;
-  max-width: 92%;
-  border-radius: 5px;
+.instagramTileBody {
+  padding: 10px;
+}
+
+.instagramTileImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
 }
 
 .instagramTileCaption {
-  text-align: left;
+  font-size: 0.9em;
+  margin-top: 10px;
+  padding: 0 10px;
 }
 
-.instagramTileCaptionText {
-  margin-left: 15px;
-  color: #ffffff;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+// Responsive adjustments
+@media (max-width: 768px) {
+  .instagramTitel h1 {
+    font-size: 1.2em;
+  }
+
+  .instagramTileHeaderPicture {
+    width: 50px;
+    height: 50px;
+  }
+
+  .instagramTileHeaderName {
+    font-size: 0.9em;
+  }
+
+  .instagramTileHeaderDate {
+    font-size: 0.8em;
+  }
+
+  .instagramTileCaption {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagramTitel h1 {
+    font-size: 1em;
+  }
+
+  .instagramTileHeaderPicture {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instagramTileHeaderName {
+    font-size: 0.8em;
+  }
+
+  .instagramTileHeaderDate {
+    font-size: 0.7em;
+  }
+
+  .instagramTileCaption {
+    font-size: 0.7em;
+  }
 }
