@@ -2,6 +2,39 @@
     margin-left: 10vw;
 }
 
+.fullscreen-container {
+    margin-top: 65vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(to right, transparent 0%, black 75%), linear-gradient(to bottom, transparent 0%, black 100%) , url('../../../public/images/landing.jpeg'); /* Pfad zu deinem Bild */
+      background-size: cover;
+      background-position: center 100%;
+      z-index: -1;
+    }
+
+    .additional-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Center horizontally */
+        position: relative;
+        z-index: 1;
+        padding-top: 50px;
+        color: black;
+        background: rgb(228, 228, 228);
+        margin-left: 6vw;
+        margin-right: 6vw;
+}
+}
+
 .vehicle-list {
     display: flex;
     margin: 5vw;

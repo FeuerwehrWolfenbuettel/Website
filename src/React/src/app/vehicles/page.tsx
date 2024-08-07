@@ -1,12 +1,18 @@
+import AnimatedText from "@/components/Animatedtext/AnimatedText";
 import fahrzeuge from "../../../public/assets/Fahrzeuge/fahrzeuge.json";
 
 import "./vehicle.scss";
 
 export default function Vehicles() {
   return (
-    <main>
-      <h1 id="title">Fuhrpark der Ortsfeuerwehr</h1>
-      <ShowFahrzeuge></ShowFahrzeuge>
+    <main className="fullscreen-container">
+      <div className="background-image">
+        <AnimatedText />
+      </div>
+      <section>
+        <h1 id="title">Fuhrpark der Ortsfeuerwehr</h1>
+        <ShowFahrzeuge />
+      </section>
     </main>
   );
 }
