@@ -9,7 +9,7 @@ export default function Vehicles() {
       <div className="background-image">
         <AnimatedText />
       </div>
-      <section>
+      <section className="additional-content">
         <h1 id="title">Fuhrpark der Ortsfeuerwehr</h1>
         <ShowFahrzeuge />
       </section>

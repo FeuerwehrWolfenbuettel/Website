@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import React, { ReactNode } from "react";
-import NavBar from '../components/NavBar/NavBar';
+import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer/Footer";
+import "./layout.scss";
 
 export const metadata: Metadata = {
   title: "Schwerpunktfeuerwehr Wolfenbüttel",
@@ -13,7 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html>
       <body>
         <NavBar />
-        {children}
+        <div id="content">{children}</div>
         <Footer />
       </body>
     </html>
