@@ -1,0 +1,84 @@
+{
+    "vehicles": [
+        {
+            "id":1,
+            "name":"TLF 1",
+            "type":"Tanklöschfahrzeug 16/25",
+            "titlePicture":"/assets/Fahrzeuge/TLF1.png",
+            "year":1994,
+            "description":"1. Fahrzeug im Löschzug",
+            "longDescription":"<h2>Dieser lange Text soll darstellen wie das auf der Website wirkt</h2><br/>Das TLF 1 stellt seit 1994 im 1. Löschzug das erstausrückende Fahrzeug. Dafür ist es mit 2 Pressluftatemschutzgeräten in der Fahrerkabine ausgestattet und führt 2 weitere Pressluftatmer mit. Der 2500l fassende Wassertank kann genutzt werden bis eine Wasserversorung über das Hydrantennetz aufgebaut ist.",
+            "tableValues": [{
+                
+            }]
+        },
+        {
+            "id":2,
+            "name":"DLK",
+            "type":"Drehleiter mit Korb 23/12",
+            "titlePicture":"/assets/Fahrzeuge/DLK.png",
+            "year":2004,
+            "description":"Das Hubrettungsfahrzeug der Stadt Wolfenbüttel"
+
+            
+        },
+        {
+            "id":3,
+            "name":"HLF",
+            "type":"Hilfeleistungslöschgruppenfahrzeug 20/16",
+            "titlePicture":"/assets/Fahrzeuge/HLF.png",
+            "year":2011,
+            "description":"Der Allrounder"
+        },
+        {
+            "id":4,
+            "name":"RW",
+            "type":"Rüstwagen",
+            "titlePicture":"/assets/Fahrzeuge/RW.png",
+            "year":2021,
+            "description":"Die \"fahrende Werkstatt\""
+        },
+        {
+            "id":5,
+            "name":"LF 8",
+            "type":"Löschgruppenfahrzeug 8",
+            "titlePicture":"/assets/Fahrzeuge/LF8.png",
+            "year":"200X",
+            "description":"Das Jugendfeuerwehrfahrzeug"
+        },
+        {
+            "id":6,
+            "name":"TLF 2",
+            "type":"Tanklöschfahrzeug 16/25",
+            "titlePicture":"/assets/Fahrzeuge/TLF2.png",
+            "year":1996,
+            "description":"Unser 2. Tanker"
+        },
+        {
+            "id":7,
+            "name":"ELW",
+            "type":"Einsatzleitwagen",
+            "titlePicture":"/assets/Fahrzeuge/ELW.png",
+            "year":"200X",
+            "description":"Die mobile Einsatzleitung"
+        },
+        {
+            "id":8,
+            "name":"GW-A",
+            "type":"Gerätewagen-Atemschutz",
+            "titlePicture":"/assets/Fahrzeuge/GWA.png",
+            "year":"200X",
+            "description":"Für Öleinsätze und Atemschutzüberwachung"
+        },
+        {
+            "id":9,
+            "name":"GW-L",
+            "type":"Gerätewagen-Logistik",
+            "titlePicture":"/assets/Fahrzeuge/GWL.png",
+            "year":"200X",
+            "description":"Für diverse Zwecke mit Rollcontainern aufrüstbar"
+        }
+        
+        
+    ]
+}
