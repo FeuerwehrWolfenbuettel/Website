@@ -1,5 +1,5 @@
 import "./page.scss";
-import AnimatedText from '../components/Animatedtext/AnimatedText'
+import AnimatedText from '../components/Animatedtext/AnimatedText';
 import ArticlePreView from "@/components/ArticlePreView/ArticlePreView";
 import InstagramFeed from "@/components/InstagramFeed/InstagramFeed";
 

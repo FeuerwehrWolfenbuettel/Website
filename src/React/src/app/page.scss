@@ -10,6 +10,11 @@ body, html, #__next {
   background-color: rgb(228, 228, 228);
 }
 
+footer {
+  margin: 0;
+  padding: 0;
+}
+
 .fullscreen-container {
   margin-top: 65vh;
   position: relative;
@@ -32,6 +37,7 @@ body, html, #__next {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Center horizontally */
     position: relative;
     z-index: 1;
     padding-top: 50px;
