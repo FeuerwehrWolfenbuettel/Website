@@ -4,13 +4,16 @@
             "id":1,
             "name":"TLF 1",
             "type":"Tanklöschfahrzeug 16/25",
-            "titlePicture":"/assets/Fahrzeuge/TLF1.png",
+            "titlePicture":"/assets/Fahrzeuge/TLF1/TLF1.png",
             "year":1994,
             "description":"1. Fahrzeug im Löschzug",
-            "longDescription":"<h2>Dieser lange Text soll darstellen wie das auf der Website wirkt</h2><br/>Das TLF 1 stellt seit 1994 im 1. Löschzug das erstausrückende Fahrzeug. Dafür ist es mit 2 Pressluftatemschutzgeräten in der Fahrerkabine ausgestattet und führt 2 weitere Pressluftatmer mit. Der 2500l fassende Wassertank kann genutzt werden bis eine Wasserversorung über das Hydrantennetz aufgebaut ist.",
+            "longDescription":"Das Tanklöschfahrzeug ist das erste Fahrzeug das in der Schwerpunktfeuerwehr zu Brandeinsätzen ausrückt. \n neue Zeile \n\n\n viele neue Zeilen \n Das TLF in Fakten:",
             "tableValues": [{
+                "key":"Atemschutzgeräte",
+                "value":"4"
                 
-            }]
+            }],
+            "images":["/assets/TLF1/TLFalsErstangreifer.jpg","/assets/TLF1/TLFalsPumpe.jpg"]
         },
         {
             "id":2,

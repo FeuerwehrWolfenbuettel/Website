@@ -57,7 +57,7 @@ const Footer = () => {
       <div className={styles.emailAndPolicy}>
         <div className={styles.email}>
           <img src="/icons/icons8-email.svg" alt="email" />
-          <span>info@Schwerpunktfeuerwehrwf.de</span>
+          <span>info@feuerwehr-wolfenbuettel.de</span>
         </div>
         <div className={styles.privacyPolicy}>
           <span className={styles.firstSpan}>Privacy policy</span>

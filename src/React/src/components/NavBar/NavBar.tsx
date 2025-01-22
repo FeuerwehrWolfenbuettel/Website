@@ -18,7 +18,7 @@ const NavBar = () => {
         </div>
         <ul className={`${styles.navLinks} ${isActive ? styles.active : ""}`}>
           <li>
-            <a href="">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="/about">Über Uns</a>
@@ -32,9 +32,12 @@ const NavBar = () => {
           <li>
             <a href="/contact">Kontakt</a>
           </li>
+          <li>
+            <a href="https://www.förderverein-wolfenbüttel.de/">Förderverein</a>
+          </li>
         </ul>
         <a className={styles.headerButton} href="/member">
-          Login
+          Mitglied werden!
         </a>
       </nav>
     </header>

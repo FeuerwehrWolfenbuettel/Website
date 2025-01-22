@@ -1,6 +1,7 @@
 .instagramFeed {
   margin-top: 50px;
   padding: 0 10px;  // Added padding to ensure the content doesn't touch the edges on smaller screens
+  margin-bottom: 5vh;
 }
 
 .instagramTitel {
@@ -74,8 +75,11 @@
 
 .instagramTileCaption {
   font-size: 0.9em;
+  height:2em;
+  text-overflow: ellipsis;
   margin-top: 10px;
   padding: 0 10px;
+  margin-bottom: 1vh;
 }
 
 // Responsive adjustments

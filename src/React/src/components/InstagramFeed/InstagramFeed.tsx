@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import styles from './InstagramFeed.module.scss';
+import styles from "./InstagramFeed.module.scss";
 
 // Define types for the Instagram feed data
 interface InstagramPost {
@@ -23,18 +23,20 @@ interface InstagramFeedData {
 // Utility function to format the date
 const formatDate = (timestamp: string): string => {
   const date = new Date(timestamp);
-  return date.toLocaleDateString('de-DE', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric'
-  }).toUpperCase();
-}
+  return date
+    .toLocaleDateString("de-DE", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    })
+    .toUpperCase();
+};
 
 // Fetch Instagram feed data
 async function getInstagramFeed(): Promise<InstagramFeedData> {
   try {
-    const accessToken = process.env.NEXT_PUBLIC_INSTAGRAM_KEY;  // Use the public environment variable
-    console.log("Access Token:", accessToken);  // Log the token for debugging
+    const accessToken = process.env.NEXT_PUBLIC_INSTAGRAM_KEY; // Use the public environment variable
+    console.log("Access Token:", accessToken); // Log the token for debugging
 
     if (!accessToken) {
       throw new Error("Access token is not defined");
@@ -48,7 +50,7 @@ async function getInstagramFeed(): Promise<InstagramFeedData> {
     }
 
     const feed = await response.json();
-    
+
     // Print the content of data[] to the console
     console.log("Instagram feed data:", feed);
 
@@ -88,14 +90,14 @@ const InstagramFeed: React.FC = () => {
           images.slice(0, 3).map((image: InstagramPost) => (
             <div key={image.id} className={styles.instagramTile}>
               <div className={styles.instagramTileHeader}>
-                <img 
+                <img
                   className={styles.instagramTileHeaderPicture}
-                  src="/assets/Logo Big Black BG.png" 
-                  alt="Instagram Logo Ortsfeuerwehr Wolfenbüttel" 
+                  src="/assets/Logo Big Black BG.png"
+                  alt="Instagram Logo Ortsfeuerwehr Wolfenbüttel"
                 />
                 <div className={styles.instagramTileHeaderTextContainer}>
                   <p className={styles.instagramTileHeaderName}>
-                    Ortsfeuerwehr_Wolfenbüttel
+                    ortsfeuerwehr_wolfenbuettel
                   </p>
                   <p className={styles.instagramTileHeaderDate}>
                     {formatDate(image.timestamp)}
@@ -103,22 +105,24 @@ const InstagramFeed: React.FC = () => {
                 </div>
               </div>
               <div className={styles.instagramTileBody}>
-                <a href={image.permalink} target="_blank" rel="noopener noreferrer">
-                  <img 
+                <a
+                  href={image.permalink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
                     className={styles.instagramTileImage}
-                    src={image.media_url} 
-                    alt={image.caption} 
+                    src={image.media_url}
+                    alt={image.caption}
                   />
                 </a>
-                <p className={styles.instagramTileCaption}>
-                  {image.caption}
-                </p>
+                <p className={styles.instagramTileCaption}>{image.caption}</p>
               </div>
             </div>
           ))}
       </div>
     </div>
   );
-}
+};
 
 export default InstagramFeed;
